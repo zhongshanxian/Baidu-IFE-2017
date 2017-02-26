@@ -22,7 +22,7 @@
 |task1|2017-02-25|
 |task2|2017-02-26|
 
-`<p>I strongly recommend against using any
+	`<p>I strongly recommend against using any
 <code>&lt;blink&gt;</code> tags.</p>
 <p>I wish SmartyPants used named entities like
 <code>&amp;mdash;</code> instead of decimal-encoded
