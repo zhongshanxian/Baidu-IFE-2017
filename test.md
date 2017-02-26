@@ -22,8 +22,11 @@
 |task1|2017-02-25|
 |task2|2017-02-26|
 
-	`<p>I strongly recommend against using any
-<code>&lt;blink&gt;</code> tags.</p>
-<p>I wish SmartyPants used named entities like
-<code>&amp;mdash;</code> instead of decimal-encoded
-entites like <code>&amp;#8212;</code>.</p>`
+`<nav>
+  <ul>
+    <li><a href="#part1">古风兴起</a></li>
+    <li><a href="#part2">古风图片</a></li>
+    <li><a href="#part3">表格</a></li>
+    <li><a href="#part4">注册</a></li>
+  </ul>
+</nav>`
