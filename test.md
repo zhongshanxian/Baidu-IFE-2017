@@ -29,14 +29,16 @@
 |task1|2017-02-25|
 |task2|2017-02-26|
 
-<nav>
-  <ul>
-     <li><a href="#part1">古风兴起</a></li>
-	 <li><a href="#part2">古风图片</a></li>
-	 <li><a href="#part3">表格</a></li>
-	 <li><a href="#part4">注册</a></li>
-  </ul>
-</nav>
+```
+    <nav>
+	  <ul>
+	     <li><a href="#part1">古风兴起</a></li>
+		 <li><a href="#part2">古风图片</a></li>
+		 <li><a href="#part3">表格</a></li>
+		 <li><a href="#part4">注册</a></li>
+	  </ul>
+	</nav>
+```
 
 *   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
     Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
