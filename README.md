@@ -1,7 +1,7 @@
 # Baidu-IFE-2017
 2017 Baidu IFE notes & codes
 
-##Directory structure
+## Directory structure
 
 # [HTML&CSS](https://github.com/zhongshanxian/Baidu-IFE-2017/tree/master/codes/HTML%26CSS)
 
