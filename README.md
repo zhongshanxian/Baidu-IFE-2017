@@ -1,12 +1,14 @@
 # Baidu-IFE-2017
 2017 Baidu IFE notes & codes
+
 ##Directory structure
-+ codes
+
+# codes
 	+ HTML&CSS
 	+ JavaScript
-+ docs
+# docs
 	+ posts
 	+ assets
-+ LICENSE
-+ README.md
+# LICENSE
+# README.md
 	 	
