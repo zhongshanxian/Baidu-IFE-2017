@@ -5,6 +5,8 @@
 	+ HTML&CSS
 	+ JavaScript
 + docs
-	+ _posts
+	+ posts
 	+ assets
++ LICENSE
++ README.md
 	 	
