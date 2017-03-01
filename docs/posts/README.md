@@ -1,3 +1,0 @@
-#posts
-+ HTML&CSS
-+ JavaScript
