@@ -8,5 +8,6 @@
 
 + [task1-零基础HTML编码](https://zhongshanxian.github.io/task1-html/)
 + [task2-零基础HTML及CSS编码（一）](https://zhongshanxian.github.io/task2-html-css/)
++ [task3-三栏式布局](https://zhongshanxian.github.io/task3-three-columns/)
 
 # JavaScript
