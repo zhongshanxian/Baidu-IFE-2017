@@ -16,33 +16,35 @@
 
 ```html
 <header>
-    <h1>古风</h1>
-    <!--导航链接-->
-    <nav>
-      <ul>
-        <li><a href="#part1">古风兴起</a></li>
-        <li><a href="#part2">古风图片</a></li>
-        <li><a href="#part3">表格</a></li>
-        <li><a href="#part4">注册</a></li>
-      </ul>
-    </nav>  
-  </header>
+      <h1>古风</h1>
+      <!--导航链接-->
+      <nav>
+        <ul>
+          <li><a href="#part1">古风兴起</a></li>
+          <li><a href="#part2">古风图片</a></li>
+          <li><a href="#part3">表格</a></li>
+          <li><a href="#part4">注册</a></li>
+        </ul>
+      </nav>
+</header>
 <!--文章-->
-  <article id="part1">
+<article id="part1">
     <h3>古风兴起</h3>
     <h4>古风入门</h4>
     <p>作者：xian  2017-02-25</p>
     <p class="text-indent">随着人们对古代越来越清醒的认识，古代的文学、思想、习俗等等已经不再是秘密；现代社会的利己、金钱观念等不良思想、观念，也冲击着人们的心灵，使人们陷入迷惘与愁苦当中。因此，有一部分人就利用古代的思想文化、诗词歌赋等等，提升自己的精神境界，在这个物欲横流的世界中保持自己的本真。<br>这里，我只想说一下古风的<strong>图片和服装</strong>。我在微博上关注了一位专画古风图片的大大：<a href="http://weibo.com/u/1789124483?topnav=1&wvr=6&topsug=1&is_hot=1" target="_blank">伊吹鸡腿子</a>，也关注了一个萌萌的妹子：<a href="http://weibo.com/u/2831094660?topnav=1&wvr=6&topsug=1" target="_blank">小豆蔻儿</a>，她是一个非常喜欢汉服的软妹。</p>
     <img src="http://wx1.sinaimg.cn/mw1024/ab957279gy1fd356cc5mmj209q08en01.jpg"><img src="http://wx2.sinaimg.cn/mw1024/ab957279gy1fd356assxej209c08dq7g.jpg">
     <p class="text-indent">除了古风图片和汉服，还有一个神奇的存在：<strong>古风歌曲</strong>。随着古风歌曲影响力的不断扩散和古风同好的不断增加，越来越多才华横溢的音乐人加入古风圈，伴随着第一个古风团队墨明棋妙的成立，古风开始正式走上原创道路。原创团队的出现，是古风发展的一个重要里程碑。从此古风圈就像一个不再幼稚的孩子，开始走上独立之路。古风歌曲不再单纯依靠外物来创作，开始有了自己的灵魂，而这种独创性更是造就了古风的独特魅力。<br>然而，古风歌手是很少露脸的，但他们的声音绝对好听。（友情链接：<a href="http://www.weibo.com/u/1744348630?topnav=1&wvr=6&topsug=1">慕寒</a> ，<a href="http://weibo.com/xiaoqu10?refer_flag=1001030101_&is_all=1#_rnd1488088899772">小曲儿</a>，<a href="http://weibo.com/u/2266537042?topnav=1&wvr=6&topsug=1&is_all=1">银临</a>）----吓到我了，小曲儿居然发自拍。</p>
-  </article>
-  <article id="hf">
+</article>
+<article id="hf">
     <h3>汉服的介绍</h3>
     <h4>汉服的款式</h4>
     <p>作者：xian 2017-02-26</p>
     <p class="text-indent">古代服饰史研究者高春明于1996年出版的<em> 《中国衣冠服饰大辞典》 </em>将<a href="https://zh.wikipedia.org/wiki/%E6%B1%89%E6%9C%8D" target="_blank">汉服</a>定义为：<strong>①辽代服制中的汉族服饰；②汉代服饰；③泛指一般的汉族服装</strong>。<br>
       近年来有“汉服运动”支持者的观点认为，“汉服”是“以华夏汉族的礼仪文化为基础，通过历代汉人王朝推崇周礼、象天法地而形成的具有独特华夏民族文化风貌性格、明显区别于其它民族传统服装的服装体系。”</p>
-    <img src="https://imgsa.baidu.com/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=5c663f21261f95cab2f89ae4a87e145b/38dbb6fd5266d016c248a477942bd40735fa351f.jpg" >
+    <div align="center">
+      <img src="http://ww4.sinaimg.cn/bmiddle/a163c684jw1e6b46lo3kwj20m8123gpc.jpg">
+    </div>
     <ul>
       <li>袄裙</li>
       <li>褙子</li>
@@ -57,33 +59,33 @@
       <li>直裾</li>
       <li>朱子深衣</li>
     </ul>
-  </article>
-  <section id="part2">
+</article>
+<section id="part2">
     <h3>古风图片</h3>
     <blockquote>
-      <div style="box-shadow:0px 0px 10px #00aa77;">
-        <p>最适合做手机壁纸的图片</p>
-        <img src="http://wx4.sinaimg.cn/mw1024/6aa3df83gy1fcgpc1mws2j20gj0rktee.jpg" width=330px>
-      </div>
-      <div>
-        <p>很真实的图片</p>
-        <img src="http://wx1.sinaimg.cn/mw1024/6aa3df83gy1fbv250n5d9j20gj0rk123.jpg" width=330px>
-      </div>
-      <div style="box-shadow:0px 0px 10px #0000aa;">
-        <p>我保证这不是黄图</p>  
-        <img src="http://ww4.sinaimg.cn/mw1024/6aa3df83gw1fbg6zx9co8j20fr0q9acd.jpg" width=330px>
-      </div>
-      <div style="box-shadow:0px 0px 10px #cc0000;">
-        <p>每一张图片都美到窒息</p>
-        <img src="http://ww2.sinaimg.cn/mw1024/6aa3df83gw1fazf8gi60jj20gj0rkthp.jpg" width=330px>
-      </div>
-      <div style="box-shadow:0px 0px 10px #111111;">
-        <p>这张是上上张图片的正脸</p>
-        <img src="http://ww1.sinaimg.cn/mw1024/6aa3df83gw1faxizn239jj20gj0rk0xo.jpg" width=330px>
-      </div>
+    <div style="box-shadow:0px 0px 10px #00aa77;">
+      <p>最适合做手机壁纸的图片</p>
+      <img src="http://wx4.sinaimg.cn/mw1024/6aa3df83gy1fcgpc1mws2j20gj0rktee.jpg" width=330px>
+    </div>
+    <div>
+      <p>很真实的图片</p>
+      <img src="http://wx1.sinaimg.cn/mw1024/6aa3df83gy1fbv250n5d9j20gj0rk123.jpg" width=330px>
+    </div>
+    <div style="box-shadow:0px 0px 10px #0000aa;">
+      <p>我保证这不是黄图</p>  
+      <img src="http://ww4.sinaimg.cn/mw1024/6aa3df83gw1fbg6zx9co8j20fr0q9acd.jpg" width=330px>
+    </div>
+    <div style="box-shadow:0px 0px 10px #cc0000;">
+      <p>每一张图片都美到窒息</p>
+      <img src="http://ww2.sinaimg.cn/mw1024/6aa3df83gw1fazf8gi60jj20gj0rkthp.jpg" width=330px>
+    </div>
+    <div style="box-shadow:0px 0px 10px #111111;">
+      <p>这张是上上张图片的正脸</p>
+      <img src="http://ww1.sinaimg.cn/mw1024/6aa3df83gw1faxizn239jj20gj0rk0xo.jpg" width=330px>
+    </div>
     </blockquote>
-  </section>
-  <section id="part3">
+</section>
+<section id="part3">
     <h3>表格</h3>
     <h4>表单</h4>
     <p>作者：xian 2017-02-25</p>
@@ -126,12 +128,12 @@
       </tr>   
       <tr style="background:#cccccc;">
         <td>合计</td>
-        <td colspan="3">￥51</td>
+        <td colspan="3">￥51</tr>
       </tr>
     </table>
-  </section>
-<!--侧边栏-->
-  <aside id="part4">
+</section>
+  <!--侧边栏-->
+<aside id="part4">
     <h3>注册</h3>
     <p>新用户请注册，并按照提示完成填写资料</p>
     <form action="#" method="post">
@@ -169,16 +171,16 @@
       <lable>个人描述：</lable>
         <textarea id="personal description" placeholder="输入您的个人描述"></textarea><br /><br />
       </div>
-       <input id="submit" type="submit" value="确认提交">
+        <input id="submit" type="submit" value="确认提交">
     </form>
-    </aside>
+</aside>
   <!--页脚-->
-  <footer><p>版权所有&copy;xian
-          <script type="text/javascript">
-            document.write(new Date().getFullYear());
+<footer><p>版权所有&copy;xian
+              <script type="text/javascript">
+               document.write(new Date().getFullYear());
               </script>
-        </p>
-  </footer>
+          </p>
+</footer>
 ```
 
 ### css
@@ -267,7 +269,7 @@
     }
     #hf img
     {
-      width:100%;
+      width:250px;
     }
     #part2 
     {
@@ -383,9 +385,10 @@
     {
       color:white;
       font-size:13px;
-      padding:21px 500px 20px 615px;;
-    }
-    </style>
+      position:relative;
+      padding:20px 45%;
+    }   
+</style>
 ```
 
 # Notes
