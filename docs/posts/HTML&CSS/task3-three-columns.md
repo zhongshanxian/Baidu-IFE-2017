@@ -12,7 +12,7 @@
 # Task
 
 + [task3 preview](https://codepen.io/zhongshanxian/pen/mWVPWV?editors=1100)
-+ [task3 source code]()
++ [task3 source code](https://github.com/zhongshanxian/Baidu-IFE-2017/blob/master/codes/HTML%26CSS/task3-three-columns.html)
 
 ### html
 
