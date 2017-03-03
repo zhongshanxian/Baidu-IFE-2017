@@ -15,21 +15,21 @@
 ```html
 <h1>古风</h1>
   <!--导航链接-->
-  <nav>
+<nav>
     <ul>
       <li><a href="#part1">古风兴起</a></li>
       <li><a href="#part2">古风图片</a></li>
       <li><a href="#part3">表格</a></li>
       <li><a href="#part4">注册</a></li>
     </ul>
-  </nav>
-<!--文章-->
-  <article>
+</nav>
+  <!--文章-->
+<article>
     <h3 id="part1">古风兴起</h3>
     <p>作者：xian  2017-02-25</p>
     <p>随着人们对古代越来越清醒的认识，古代的文学、思想、习俗等等已经不再是秘密；现代社会的利己、金钱观念等不良思想、<br>观念，也冲击着人们的心灵，使人们陷入迷惘与愁苦当中。因此，有一部分人就利用古代的思想文化、<br>诗词歌赋等等，提升自己的精神境界，在这个物欲横流的世界中保持自己的本真。<br>这里，我只想说一下古风的<strong>图片和服装</strong>。我在微博上关注了一位专画古风图片的大大：<a href="http://weibo.com/u/1789124483?topnav=1&wvr=6&topsug=1&is_hot=1" target="_blank">伊吹鸡腿子</a>，也关注了一个萌萌的妹子：<a href="http://weibo.com/u/2831094660?topnav=1&wvr=6&topsug=1" target="_blank">小豆蔻儿</a>，她是一个非常喜欢汉服的软妹。</p>
     <p>汉服的款式</p>
-    <img src="https://imgsa.baidu.com/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=5c663f21261f95cab2f89ae4a87e145b/38dbb6fd5266d016c248a477942bd40735fa351f.jpg">
+    <img src="http://ww4.sinaimg.cn/bmiddle/a163c684jw1e6b46lo3kwj20m8123gpc.jpg">
     <ul>
       <li>袄裙</li>
       <li>褙子</li>
@@ -44,8 +44,8 @@
       <li>直裾</li>
       <li>朱子深衣</li>
     </ul>
-  </article>
-  <section id="part2">
+</article>
+<section id="part2">
     <h3>古风图片</h3>
     <blockquote>
     <p>最适合做手机壁纸的图片</p>
@@ -59,8 +59,8 @@
     <p>这张是上上张图片的正脸</p>
     <img src="http://ww1.sinaimg.cn/mw1024/6aa3df83gw1faxizn239jj20gj0rk0xo.jpg">
     </blockquote>
-  </section>
-  <section id="part3">
+</section>
+<section id="part3">
     <h3>表格</h3>
     <p>作者：xian 2017-02-25</p>
     <ol>
@@ -105,9 +105,9 @@
         <td colspan="3">￥51</tr>
       </tr>
     </table>
-  </section>
+</section>
   <!--侧边栏-->
-  <aside id="part4">
+<aside id="part4">
     <h3>注册</h3>
     <p>新用户请注册，并按照提示完成填写资料</p>
     <form>
@@ -125,9 +125,9 @@
     <p>个人描述：</p><textarea placeholder="输入您的个人描述"></textarea>
      <input type="submit" value="确认提交">
     </form>
-    </aside>
-  <!--页脚-->
-    <footer>版权所有&copy;xian</footer>
+</aside>
+<!--页脚-->
+<footer>版权所有&copy;xian</footer>
 ```
 
 # Notes
