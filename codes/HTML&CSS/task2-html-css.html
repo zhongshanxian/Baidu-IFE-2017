@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta name="author" content="xian">
     <style type="text/css">
-    html
+    body
     {
       background:#cdcdcd;
     }
@@ -21,16 +21,16 @@
     nav ul
     {
       position:absolute;
-      top:5px;
-      right:0px;
+      top:20px;
+      right:0;
     }
     nav li a:link{color:white;text-decoration:none;}
     nav li a:hover,nav li a:visited{color:#bbbbbb;}
     h1
     {
       position:relative;
-      top:-10px;
-      left:25px;
+      top:10px;
+      padding-left:25px;
       color:#cdcdcd;
     }
     h4
@@ -48,19 +48,17 @@
     }
     header
     {
-      background:rgba(0,0,0,0.85);
+      background:rgba(0,0,0,0.8);
       width:100%;
       height:65px;
-      position:absolute;
-      top:0px;
-      right:3px;
+      position:relative;
+      top:-20px;
     }
     #part1
     {
+      margin:0 18px;
       background:white;
       position:relative;
-      top:70px;
-      margin:18px;
       padding:25px 20px 27px 20px;
       box-shadow:5px 5px 6px gray;
     }
@@ -77,20 +75,27 @@
     {
       background:white;
       margin:18px;
-      padding:25px 20px 60px 20px;
+      padding:25px 20px 30px 20px;
       box-shadow:5px 5px 6px gray;
-      position:relative;
-      top:80px;
     }
     #hf li
     {
-      float:left;
-      padding-right:45px;
-      font-size:17px;
+      /*float:left;*/
+      font-size:17px
+    }
+    #hf ul
+    {
+      list-style-type:none; 
     }
     #hf img
     {
       width:250px;
+    }
+    #word
+    {
+      position:relative;
+      top:50%;
+      transform:translate(0,20%);
     }
     #part2 
     {
@@ -98,21 +103,26 @@
       margin:18px;
       padding:25px 20px 60px 20px;
       box-shadow:5px 5px 6px gray;  
-      position:relative;
-      top:90px;
+
+      width:auto;
     }
-    #part2 div
+    #part2 figure
     {
       border:1px solid #dddddd;
       box-shadow:0px 0px 10px #007700;
-      width:330px;
-      padding:10px 25px 25px 25px;
-      margin-top:30px;
+      width:190px;
+      padding:10px;
+      margin:30px 20px 0 0;
       text-align:center;
+      float:left;
     }
     #part2 p
     {
-        font-size:20px;
+       font-size:20px;
+    }
+    #part2 img
+    {
+      width:140px;
     }
     #part3
     {
@@ -120,8 +130,6 @@
       margin:18px;
       padding:25px 20px 60px 20px;
       box-shadow:5px 5px 6px gray;  
-      position:relative;
-      top:100px;
     }
     #part3 table
     {
@@ -131,54 +139,23 @@
     } 
     #part3 table th,td
     {
-      border-left:1px solid gray;border-top:1px solid gray;
+      border-left:1px solid gray;
+      border-top:1px solid gray;
     } 
     #part4
     {
       background:white;
       margin:18px;
-      padding:25px 20px 35px 20px;
+      padding:25px 20px 60px 20px;
       box-shadow:5px 5px 6px gray;  
-      position:relative;
-      top:105px;
     }
-    #part4 div
+    #form
     {
-      display:inline;
+      width:350px;
     }
-    #part4 lable
+    .col-xs-5
     {
-      margin-left:300px;
       text-align:right;
-      width:240x;
-      height:35px;
-    }
-    #part4 div+p
-    {
-      font-size:10px;
-      color:gray;
-      margin-left:433px;
-    }
-    #password-box
-    {
-      margin-left:30px;
-    }
-    #sex1,#sex1+div,#sex1+div+div
-    {
-      margin-left:80px;
-    }
-    #sex1+div+div+div
-    {
-      margin-left:50px;
-      position:relative;
-      top:-70px;
-    }
-    #part4 textarea
-    {
-      width:500px;
-      height:80px;
-      position:relative;
-      top:70px;
     }
     #submit
     {
@@ -190,24 +167,32 @@
       color:white;
       font-size:15px;
     }
+    form p
+    {
+      font-size:12px;
+      color:gray;
+    }
     footer
     {
-      background:rgba(0,0,0,0.85);
+      background:rgba(0,0,0,0.8);
       width:100%;
       height:65px;
-      margin:0px;
-      padding:0px;
-      position:relative;
-      top:108px;
-      left:-8px;
-      width:1346px;
     }
-    footer p
+    footer div
     {
       color:white;
-      font-size:13px;
+      text-align:center;
       position:relative;
-      padding:20px 45%;
+      top:35%;
+    }
+    /*小屏显示滚动条*/
+    @media only screen and (max-width:514px)
+    {
+      body 
+      {
+        overflow-x:scroll;
+        width:500px;
+      }
     }
     </style>
 </head>
