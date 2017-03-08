@@ -11,7 +11,7 @@
 # Task
 
 + [task6 preview](https://codepen.io/zhongshanxian/pen/EWydbQ?editors=1100)
-+ [task6 source code]()
++ [task6 source code](https://github.com/zhongshanxian/Baidu-IFE-2017/blob/master/codes/HTML%26CSS/task6-newspaper.html)
 
 ### html
 
