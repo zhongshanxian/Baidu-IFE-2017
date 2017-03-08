@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>task6-newspaper</title>
+  <link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" type="text/css">
+  <meta charset="utf-8">
+  <meta name="author" content="xian">
+  <style type="text/css">
+  html
+	{
+	  background:#cccccc;
+	}
+	body
+	{
+	  width:980px;
+	  height:1386px;
+	  background:white;
+	  margin:0 auto;
+	  position:relative;
+	  display:flex;
+	  flex-flow:column;
+	  min-height:100vh;
+	}
+	article
+	{
+	  flex:1;
+	}
+	header
+	{
+	  width:892px;
+	  height:61px;
+	  border-bottom:2px solid #938e8c;
+	  margin:0 auto;
+	  position:relative;
+	}
+	#red-box
+	{
+	  width:110px;
+	  height:61px;
+	  background:#d45d5c;
+	  border-bottom:2px solid #938e8c;
+	  position:relative;
+	}
+	#red-box p
+	{
+	  font-size:12px;
+	  color:#fff;
+	  font-family:SimHei;
+	  position:absolute;
+	  bottom:-10px;
+	  left:5px;
+	}
+	#date
+	{
+	  position:absolute;
+	  right:0px;
+	  bottom:-10px;
+	  font-size:12px;
+	  color:#d45d5c;
+	  font-family:SimHei;
+	}
+	section
+	{
+	max-width: 892px;
+	margin: 1em calc(50% - 446px);
+	}
+	#part1
+	{
+	  margin-top:25px;
+	}
+	#part1-photo
+	{
+	  width:641px;
+	  height:301px;
+	  background-image:url(https://github.com/zhongshanxian/Baidu-IFE-2017/blob/master/docs/assets/img/yinlin1.jpg?raw=true);  
+	  float:left;
+	}
+	#box-green
+	{
+	  background:rgba(170,230,170,0.7);
+	  width:191px;
+	  height:301px;
+	  float:left;
+	}
+	#box-red
+	{
+	  background:rgba(230,170,170,0.7);
+	  width:191px;
+	  height:301px;
+	  float:right;
+	}
+	#part1-word
+	{
+	  width:203px;
+	  height:301px;
+	  border-top:2px solid #cc8091;
+	  float:right;
+	  font-family: "Microsoft YaHei";
+	}
+	#p1
+	{
+	  text-decoration: underline;
+	  font-variant: small-caps;
+	  font-size:24px;
+	  color:#000000;
+	  margin-top:4px;
+	}
+	#p2
+	{
+	  font-size:12px;
+	  color:#676767;
+	  font-family:"KaiTi";
+	  margin-top:-10px;
+	}
+	#p3
+	{
+	  font-size:116px;
+	  color:#75b86b;
+	  font-family:"Microsoft YaHei";
+	  /*font-style:oblique;*/
+	  margin-top:-10px;
+	}
+	#p4
+	{
+	  color:#cc8091;
+	  font-family:"Microsoft YaHei";
+	  font-size:55px;
+	  margin-top:-45px;
+	  float:left;
+	}
+	#css
+	{
+	  float:left;
+	  margin-top:-30px;
+	  margin-left:5px;
+	}
+	#p5
+	{
+	  color:#cc8091;
+	  font-family:"Microsoft YaHei";
+	  font-size:21px;
+	  margin-top:10px;
+	}
+	#p6
+	{
+	  color:#888;
+	  font-family:"Microsoft YaHei";
+	  font-size:12px;
+	  margin-top:-17px;
+	}
+	#part2
+	{
+	  width:641px;
+	}
+	#what
+	{
+	  width:230px;
+	  float:left;
+	}
+	#what h3
+	{
+	  color:#418c59;
+	  font-size:16px;
+	  text-decoration: underline;
+	  font-family:"Microsoft YaHei";
+	  font-weight:bold;
+	}
+	#what p
+	{
+	  font-size:12px;
+	  color:#767777;
+	  font-family:"SimSun";
+	}
+	#when
+	{
+	  width:210px;
+	  float:left;
+	  margin-left:22px;
+	}
+	#when h3
+	{
+	  color:#d2994f;
+	  font-size:16px;
+	  text-decoration: underline;
+	  font-family:"Microsoft YaHei";
+	  font-weight:bold;
+	}
+	#when p
+	{
+	  font-size:12px;
+	  color:rgba(35,24,21,0.7);/*#231815*/
+	  font-family:"Microsoft YaHei";
+	}
+	#how
+	{
+	  width:155px;
+	  float:left;
+	  margin-left:19px;
+	}
+	#how h3
+	{
+	  color:#cc7680;
+	  font-size:16px;
+	  text-decoration: underline;
+	  font-family:"Microsoft YaHei";
+	  font-weight:bold;
+	}
+	#how p
+	{
+	  font-size:12px;
+	  color:rgba(35,24,21,0.7);/*#231815*/
+	  font-family:"Microsoft YaHei";
+	}
+	#how span
+	{
+	  font-style:oblique;
+	  color:rgba(205,74,72,0.7);
+	}
+	#part3
+	{
+	  position:relative;
+	  width:415px;
+	  height:500px;
+	  margin-top:0px;
+	  float:left;
+	}
+	#part3-title
+	{
+	  border-bottom:2px solid black;
+	  width:415px; 
+	}
+	#part3-title h3
+	{
+	  font-size:42px;
+	  color:#11456b;
+	  font-weight:bold;
+	  font-family:"SimHei";
+	}
+	#part3-title span
+	{
+	  font-size:72px;
+	  color:#f5e327;
+	  font-style:oblique; 
+	}
+	#of
+	{
+	  margin-top:-20px;
+	}
+	#part3-title p
+	{
+	  font-size:33px;
+	  color:#11456b;
+	  font-weight:bold;
+	  font-family:"SimHei";
+	  margin-top:-12px;
+	}
+	#part3-word p
+	{
+	  font-size:12px;
+	  color:#767777;
+	  font-family:"SimSun";
+	  margin-top:25px;
+	}
+	#part3-word p+p
+	{
+	  margin-top:-10px;
+	}
+	#qian
+	{
+	  font-size:70px;
+	  color:#f5e327;
+	  font-family:"Microsoft YaHei";
+	  float: left;
+	  width: 78px;
+	  height: 72px;
+	  text-align: center;
+	  line-height: 72px;
+	}
+	#part3-word img
+	{
+	  float: right;
+	  margin: 1.5em 0 1em 1em;
+	}
+	#part4
+	{
+	  position:relative;
+	  width:458px;
+	  /*height:500px;*/
+	  float:right;
+	  height:670px;
+	  margin-top:-480px;
+	}
+	#part4-photo
+	{
+	  background-image:url(https://github.com/zhongshanxian/Baidu-IFE-2017/blob/master/docs/assets/img/yinlin3.jpg?raw=true);
+	  width:458px;
+	  height:275px;
+	  position:relative;
+	}
+	#box-black
+	{
+	  width:458px;
+	  height:61px;
+	  background:rgba(0,0,0,0.5);
+	  position:absolute;
+	  bottom:0;
+	}
+	#word
+	{
+	  width:380px;
+	  margin:8.5px auto;
+	  height:44px;
+	  border-left:3px solid #72b16a;
+	}
+	#word p
+	{
+	  color:white;
+	  font-size:26px;
+	  font-family:"Microsoft YaHei";
+	  padding:0 10px 0 10px;
+	}
+	#word span
+	{
+	  font-size:12px;
+	  color:#72b16a;
+	  padding:0 10px 0 10px;
+	  font-style:oblique; 
+	}
+	#part4-word
+	{
+	  width:458px;
+	  height:348px;
+	  margin-top:30px;
+	  background:#ececec;
+	  position:relative;
+	}
+	li
+	{
+	  list-style-image:url(https://github.com/zhongshanxian/Baidu-IFE-2017/blob/master/docs/assets/img/list.jpg?raw=true);
+	  font-size:16px;
+	  color:#5a5b5b;
+	  font-family:"SimSun";
+	  margin-bottom:22px;
+	}
+	li span
+	{
+	  font-size:12px;
+	  font-style:oblique; 
+	}
+	#red-box2
+	{
+	  width:265px;
+	  height:160px;
+	  background:#d45d5c;
+	  position:absolute;
+	  bottom:0px;
+	  float:left;
+	}
+	#red-box2 p
+	{
+	  font-family:"Microsoft YaHei";
+	  font-size:110px;
+	  color:white;
+	  margin-left:5px;
+	  float:left;
+	}
+	#red-box2 div
+	{
+	  border-left:2px solid white;
+	  width:180px;
+	  height:86px;
+	  float:left;
+	  margin:37px 5px;
+	}
+	#red-box2 div p span
+	{
+	  font-size:21px;
+	  font-style:oblique;
+	  font-family:"SimHei";
+	  line-height:24px;
+	}
+	#red-box2 div p
+	{
+	  font-size:12px;
+	  line-height:16px;
+	}
+	#last-box
+	{
+	  width:205px;
+	  height:160px;
+	  float:right;
+	  position:relative;
+	  margin-right:-15px;
+	}
+	#last-box p
+	{
+	  font-size:14px;
+	  color:#5a5b5b;
+	  font-style:oblique;
+	  font-family:"SimHei";
+	  width:150px;
+	  position:absolute;
+	  bottom:-15px;
+	  right:20px;
+	  text-indent:2.5em;
+	}
+	#ql
+	{
+	  font-size:72px;
+	  font-family:"SimHei";
+	  color: #d45d5c;
+	  position:absolute;
+	  top:20px;
+	}
+	#qr
+	{
+	  font-size:72px;
+	  font-family:"SimHei";
+	  color: #d45d5c;
+	  position:absolute;
+	  top:130px;
+	  right:10px;
+	}
+	/*blockquote
+	{
+	  font-size:14px;
+	  color:#5a5b5b;
+	  font-style:oblique;
+	  font-family:"SimHei";
+	  margin-top:35px;
+	}
+	blockquote:before {
+	  color: #d45d5c;
+	  content: "\201C";
+	  font-size:72px;
+	  position:absolute;
+	  left:-50px;
+	  top: 55px;
+	  line-height: 0.1em;
+	}
+	blockquote:after {
+	  color:#d45d5c;
+	  content: "\201D";
+	  font-size: 72px;
+	  position:absolute;
+	  right:10px;
+	  bottom: -45px;
+	  line-height: 0.1em;
+	}*/
+	footer
+	{
+	  width:892px;
+	  height:61px;
+	  border-top:1px solid #938e8c;
+	  margin:0 auto;
+	}
+	footer p
+	{
+	  font-size:12px;
+	  color:#d45d5c;
+	  font-family:SimHei;
+	  text-align:right;
+	}
+  </style>
+</head>
+<body>
+  <header>
+    <div id="red-box">
+      <p>ife.baidu.com</p>
+    </div>
+    <p id="date">2017.03</p>   
+  </header>
+  <article>
+    <section id="part1">
+      <div id="part1-photo">
+        <div id="box-green">
+        </div>
+        <div id="box-red">
+        </div>
+      </div>
+      <div id="part1-word">
+        <p id="p1">Rachel<br>Archaic-singer</p>
+        <p id="p2">She is an archaic singer,and 《锦鲤抄》 is her masterpiece.</p>
+        <p id="p3">700</p>
+        <p id="p4">3.2</p>
+        <div id="css">
+          <p id="p5">古风</p>
+            <p id="p6">archaic singer</p>
+        </div>
+      </div>
+    </section>
+    <section id="part2">
+      <div id="what">
+        <h3>What</h3>
+        <p>2011年，担任歌声魅影剧社年度音乐剧《歌剧魅影》的主演。2012年，担任音乐剧《红磨坊》的导演；同年，其演唱的歌曲《风烟倦》、《商女恨》分别获“第二届古风原创歌曲大赛”第六名和第七名。2013年，推出首张个人音乐专辑《腐草为萤》。2014年，为网络游戏《倩女幽魂2》演唱主题曲《十世镜》。2015年，参加在北京举办的“结绳纪·踏歌行千山”古风音乐会。</p>
+      </div>
+      <div id="when">
+        <h3>When</h3>
+        <p>2016年，为手游《夏目的美丽日记》演唱同名主题曲；同年3月19日，参加“国风动漫音乐节”重庆站的演出；同年4月，与徐浩参加音乐类综艺节目《TAI music》的录制；同年5月13日，担任南京大学“第35届校园十大歌星赛”决赛的评委，并现场演唱了歌曲《牵丝戏》；同年6月，为舞台剧《三界封魔录-莲花劫》创作并演唱主题曲。</p>
+      </div>
+      <div id="how">
+        <h3>How</h3>
+        <p>同年7月，为南瑾天<br>
+          演唱的歌曲<br>
+          《繁花结—记万花》作曲。<br><br><br>
+          What--------<span>40%</span><br>
+          What--------<span>30%</span><br>
+          What--------<span>30%</span></p>
+      </div>
+    </section>
+    <section id="part3">
+      <div id="part3-title">
+        <h3><span>THE</span> MASTERPIECE </h3>
+        <h3 id="of">OF ANCIENT FIELD</h3>
+        <p>古风领域</p>
+      </div>
+      <div id="part3-word">
+        <p><span id="qian">银</span>临的嗓音清澈干净、质朴自然，彷佛盛夏一汪碧绿的泉清可见底，又像是初冬深不见底的湖泊，充满了流动性和深邃感。时而高亢，时而轻柔，时而宽阔，时而幽远。但无论哪种，都能穿过都市的喧嚣和生活的庸碌，直达我们每个人的心底，她拥有独一无二的风格，就像一只充满灵性的银铃在皑皑白雪中浅吟低唱。银临不仅音色很丰富，而且她的眼神还很深情。<img src="https://github.com/zhongshanxian/Baidu-IFE-2017/blob/master/docs/assets/img/yinlin2.jpg?raw=true" alt="yinlin photo">2011年，担任歌声魅影剧社年度音乐剧《歌剧魅影》的主演。2012年，担任音乐剧《红磨坊》的导演；同年，其演唱的歌曲《风烟倦》、《商女恨》分别获“第二届古风原创歌曲大赛”第六名和第七名。2013年，推出首张个人音乐专辑《腐草为萤》。2014年，为网络游戏《倩女幽魂2》演唱主题曲《十世镜》。2015年，参加在北京举办的“结绳纪·踏歌行千山”古风音乐会。</p>
+   			<p style="text-indent:25px;">2011年，担任歌声魅影剧社年度音乐剧《歌剧魅影》的主演。2012年，担任音乐剧《红磨坊》的导演；同年，其演唱的歌曲《风烟倦》、《商女恨》分别获“第二届古风原创歌曲大赛”第六名和第七名。2013年，推出首张个人音乐专辑《腐草为萤》。2014年，为网络游戏《倩女幽魂2》演唱主题曲《十世镜》。2015年，参加在北京举办的“结绳纪·踏歌行千山”古风音乐会。</p>
+        <p style="text-indent:25px;">2011年，担任歌声魅影剧社年度音乐剧《歌剧魅影》的主演。2012年，担任音乐剧《红磨坊》的导演；同年，其演唱的歌曲《风烟倦》、《商女恨》分别获“第二届古风原创歌曲大赛”第六名和第七名。2013年，推出首张个人音乐专辑《腐草为萤》。2014年，为网络游戏《倩女幽魂2》演唱主题曲《十世镜》。</p>
+      </div>
+    </section>
+    <section id="part4">
+      <div id="part4-photo">  
+        <div id="box-black">
+          <div id="word">
+            <p>古风领域<span>有名气的古风歌手</span></p>
+          </div>
+        </div>
+      </div>
+      <div id="part4-word"><br />
+        <ul>
+          <li>银临丢子小曲儿慕寒五色南石叶..................<span>古风</span></li>
+          <li>小曲儿慕寒五色南石叶...........................<span>古古风</span></li>
+          <li>小曲儿慕寒五色南石叶红尘银临丢子..............<span>古风</span></li>
+        </ul>
+        <div id="red-box2">
+          <p>0</p>
+          <div>
+            <p><span>ONE TWO <br>THREE FOUR FIVE</span> archaic singer archaic singer archaic singer</p>
+          </div>
+        </div>
+        <div id="last-box">
+          <!--<blockquote>hello world hello world hello world hello world hello world hello world hello world hello world hello world</blockquote>-->
+          <div id="ql">“</div>
+          <p>archaic singer <br>archaic singer abc archaic singer abc archaic singer abc archaic singer abc archaic</p>
+          <div id="qr">”</div>
+        </div>
+      </div>
+    </section>    
+  </article>
+  <footer>
+    <p>ife.baidu.com</p>
+  </footer>
+</body>
+</html>
