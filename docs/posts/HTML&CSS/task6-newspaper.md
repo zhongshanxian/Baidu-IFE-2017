@@ -1,113 +1,168 @@
 # Lesson
 
-+ [task7-实现常见的技术产品官网的页面架构及样式布局](http://ife.baidu.com/course/detail/id/102)
++ [task6-通过HTML及CSS模拟报纸排版](http://ife.baidu.com/course/detail/id/99)
 
 # Requirements
 
-+ 学习掌握如何在没有标注的情况下实现设计稿到页面的精确转变
-+ 设计稿是有一定宽度的，这个宽度为页面的最小宽度，也就是说，当浏览器窗口宽度小于设计稿宽度时，允许出现横向滚动条
-+ 在Chrome中完美实现与设计稿的各项字体、布局、内外边距等样式
++ 深入掌握CSS中的字体、背景、颜色等属性的设置
++ 进一步练习CSS布局
++ 在Chrome中完美实现符合标注中的各项说明
 
 # Task
 
-+ [task7 preview](https://codepen.io/zhongshanxian/pen/xqgxWy)
-+ [task7 source code](https://github.com/zhongshanxian/Baidu-IFE-2017/blob/master/codes/HTML%26CSS/task7-web%20page%20structure.html)
++ [task6 preview](https://codepen.io/zhongshanxian/pen/EWydbQ?editors=1100)
++ [task6 source code](https://github.com/zhongshanxian/Baidu-IFE-2017/blob/master/codes/HTML%26CSS/task6-newspaper.html)
 
 ### html
 
 ```html
-<body><!--部分代码，轮播图部分-->
-  <div id="myCarousel" class="carousel slide">
-        <!-- 轮播（Carousel）指标 -->
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>   
-        <!-- 轮播（Carousel）项目 -->
-        <div class="carousel-inner" id="carousel-page">
-          <div class="item active">
-            <p style="font-size:20px;margin-bottom:25px;">新世界/<span style="color:red;">01</span></p>
-            <p style="font-size:10px;color:gray;line-height:30px;width:300px;text-align:left;margin:0 auto 45px;">新世界是个新世界新世界是个新世界新世界是个新世界<br>新世界是个新世界新世界是个新世界新世界是个新世界<br>新世界是个新世界新世界是个新世界新世界是个新世界<br>新世界是个新世界新世界是个新世界</p>
-            <div>
-              <a href="#">更多详情</a>
-            </div>
-          </div>
-          <div class="item">
-            <p style="font-size:20px;margin-bottom:25px;">新世界/<span style="color:red;">02</span></p>
-            <p style="font-size:10px;color:gray;line-height:30px;width:300px;text-align:left;margin:0 auto 45px;">新世界是个新世界新世界是个新世界新世界是个新世界<br>新世界是个新世界新世界是个新世界新世界是个新世界<br>新世界是个新世界新世界是个新世界新世界是个新世界<br>新世界是个新世界新世界是个新世界</p>
-            <div>
-              <a href="#">更多详情</a>
-            </div>
-          </div>
-          <div class="item">
-            <p style="font-size:20px;margin-bottom:25px;">新世界/<span style="color:red;">03</span></p>
-            <p style="font-size:10px;color:gray;line-height:30px;width:300px;text-align:left;margin:0 auto 45px;">新世界是个新世界新世界是个新世界新世界是个新世界<br>新世界是个新世界新世界是个新世界新世界是个新世界<br>新世界是个新世界新世界是个新世界新世界是个新世界<br>新世界是个新世界新世界是个新世界</p>
-            <div>
-              <a href="#">更多详情</a>
-            </div>
+<body>
+  <header>
+    <div id="red-box">
+      <p>ife.baidu.com</p>
+    </div>
+    <p id="date">2017.03</p>   
+  </header>
+  <article>
+    <section id="part1">
+      <div id="part1-photo">
+        <div id="box-green">
+        </div>
+        <div id="box-red">
+        </div>
+      </div>
+      <div id="part1-word">
+        <p id="p1">Rachel<br>Archaic-singer</p>
+        <p id="p2">She is an archaic singer,and 《锦鲤抄》 is her masterpiece.</p>
+        <p id="p3">700</p>
+        <p id="p4">3.2</p>
+        <div id="css">
+          <p id="p5">古风</p>
+            <p id="p6">archaic singer</p>
+        </div>
+      </div>
+    </section>
+    <section id="part2">
+      <div id="what">
+      </div>
+      <div id="when">
+      </div>
+      <div id="how">
+      </div>
+    </section>
+    <section id="part3">
+      <div id="part3-title">
+        <h3><span>THE</span> MASTERPIECE </h3>
+        <h3 id="of">OF ANCIENT FIELD</h3>
+        <p>古风领域</p>
+      </div>
+      <div id="part3-word">
+      </div>
+    </section>
+    <section id="part4">
+      <div id="part4-photo">  
+        <div id="box-black">
+          <div id="word">
+            <p>古风领域<span>有名气的古风歌手</span></p>
           </div>
         </div>
       </div>
+      <div id="part4-word"><br />
+        <ul>
+        </ul>
+        <div id="red-box2">
+          <p>0</p>
+          <div>
+            <p><span>ONE TWO <br>THREE FOUR FIVE</span> archaic singer archaic singer archaic singer</p>
+          </div>
+        </div>
+        <div id="last-box">
+          <!--<blockquote>hello world hello world hello world hello world hello world hello world hello world hello world hello world</blockquote>-->
+          <div id="ql">“</div>
+          <p>archaic singer <br>archaic singer abc archaic singer abc archaic singer abc archaic singer abc archaic</p>
+          <div id="qr">”</div>
+        </div>
+      </div>
+    </section>    
+  </article>
+  <footer>
+    <p>ife.baidu.com</p>
+  </footer>
 </body>
 ```
 
 ### css
 
 ```css
-<style type="text/css">/*部分代码*/
-/*设置select的样式*/
-#part2 select
+<style type="text/css">
+/*部分代码/*
+section  /*内容居中*/
 {
-  width:240px;
-  height:36px;
-  margin:0 25px 0 0;
-  /*很关键：将默认的select选择框样式清除*/
-  -webkit-appearance:none;
-  appearance:none;
-  -moz-appearance:none;
-  padding:7px;
-  background:url("https://github.com/zhongshanxian/Baidu-IFE-2017/blob/master/docs/assets/img/select.png?raw=true") white no-repeat 212px 8px;
-  color:#444;
+max-width: 892px;
+margin: 1em calc(50% - 446px);
 }
-/*设置尖角*/
-#tan
+#part1
 {
-  border:22px solid;
-  border-color:transparent white transparent transparent;
-  height:0px;
-  width:0px;
-  float:right;
-  position:relative;
-  top:-170px;;
+  margin-top:25px;
+}
+#part1-photo
+{
+  width:641px;
+  height:301px;
+  background-image:url(https://github.com/zhongshanxian/Baidu-IFE-2017/blob/master/docs/assets/img/yinlin1.jpg?raw=true);  
+  float:left;
 }
 </style>
 ```
 
 # Notes
 
-+ CSS设计指南（第三版）
-   + 弹出层的尖角
++ CSS揭秘（第三版）
+   + 固定页脚的位置
 
 ```css
 <style type="text/css">
-  #tan
+  body
   {
-    border:22px solid;/*size*/
-    border-color:transparent white transparent transparent;/*方向*/
-    height:0px;
-    width:0px;
+    display:flex;
+    flex-flow:column;
+    min-height:100vh;
+  }
+  article
+  {
+    flex:1;
   }
 </style>
 ```
-+ 报名表处利用bootstrap的栅格布局实现
++ 页尾处的冒号可以使用伪类实现
 
-```html
-<div id="write" class="row">
-  <div id="item" class="col-xs-5">
-  </div>
-  <div id="information" class="col-xs-7">
-  </div>
-</div>
-
+```css
+<style type="text/css">
+  blockquote
+  {
+    font-size:14px;
+    color:#5a5b5b;
+    font-style:oblique;
+    font-family:"SimHei";
+    margin-top:35px;
+  }
+  blockquote:before {
+    color: #d45d5c;
+    content: "\201C";
+    font-size:72px;
+    position:absolute;
+    left:-50px;
+    top: 55px;
+    line-height: 0.1em;
+  }
+  blockquote:after {
+    color:#d45d5c;
+    content: "\201D";
+    font-size: 72px;
+    position:absolute;
+    right:10px;
+    bottom: -45px;
+    line-height: 0.1em;
+  }
+</style>
 ```
