@@ -12,5 +12,6 @@
 + [task4-定位和居中问题](https://zhongshanxian.github.io/task4-position/)
 + [task5-零基础HTML及CSS编码（二）](https://zhongshanxian.github.io/task5-html-css2/)
 + [task6-通过HTML及CSS模拟报纸排版](https://zhongshanxian.github.io/task6-newspaper/)
++ [task7-实现常见的技术产品官网的页面架构及样式布局](https://zhongshanxian.github.io/task7-web-page-structure/)
 
 # JavaScript
