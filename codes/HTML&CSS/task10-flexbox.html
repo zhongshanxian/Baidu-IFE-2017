@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task10-flexbox</title>
+	<meta charset="utf-8">
+  <meta name="author" content="xian">
+	<link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+	<style type="text/css">
+		.item
+		{
+		  display:flex;
+		  justify-content:space-between;
+		  align-items:center;
+		}
+		.item div
+		{
+		  width:150px;
+		}
+		.item1
+		{
+		  height:120px;
+		  border:1px solid red;
+		}
+		.item2
+		{
+		  height:100px;
+		  border:1px solid red;
+		}
+		.item3
+		{
+		  height:40px;
+		  border:1px solid red;
+		}
+		.item4
+		{
+		  height:200px;
+		  border:1px solid blue;
+		}
+		@media only screen and (max-width:640px)
+		{
+		  .item
+		  {
+		   flex-wrap:wrap;
+		   align-items: flex-start;
+		   margin:0 38px;
+		  }
+		  .item1
+		  {
+		    order:2;
+		  }
+		  .item2
+		  {
+		    order:3;
+		  }
+		  .item3
+		  {
+		    order:4;
+		  }
+		  .item4
+		  {
+		    order:1;
+		    margin-bottom:20px;
+		  }
+		  body
+		  {
+		    overflow-x:scroll;
+		    width:598px;
+		  }
+		}
+	</style>
+</head>
+
+<body>
+	<div class="item">
+	  <div class="item1">2</div>
+	  <div class="item2">3</div>
+	  <div class="item3">4</div>
+	  <div class="item4">4</div>
+	</div>
+</body>
+</html>
