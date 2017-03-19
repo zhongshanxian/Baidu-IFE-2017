@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task8-rasterize</title>
+	<link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+	<meta charset="utf-8">
+	<meta name="author" content="xian">
+	<style type="text/css">
+		.container
+		{
+		  width:100%;
+		  padding:10px 15px;
+		}
+		[class*='col-']/*所有class中含有col-的元素*/
+		{
+		  float:left;
+		  height:70px;
+		  padding:10px;
+		  width:8.33%;
+		}
+		.col-1-1{ width: 8.33%;}
+		.col-1-2{ width: 16.66%;}
+		.col-1-3{ width: 25%;}
+		.col-1-4{ width: 33.33%;}
+		.col-1-6{ width: 50%;}   
+		.row
+		{
+		    padding:0 10px;
+		}
+		 [class*='col-'] > p/*所有class中含有col-的元素里面的p*/
+		{
+		   background-color: #d45d5c; 
+		   height:50px;
+		   border:1px solid #555;
+		}
+		@media only screen and (max-width:768px)
+		{
+		  .col-2-1{ width: 8.33%;}
+		  .col-2-2{ width: 16.66%;}
+		  .col-2-3{ width: 25%;}
+		  .col-2-4{ width: 33.33%;}
+		  .col-2-6{ width: 50%;} 
+		  .col-2-8{ width:66.66%;}
+		  .col-2-12{ width:100%;}
+		}
+	</style>
+</head>
+
+<body>
+	<section class="container">
+	  <div class="row">
+	    <div class="col-1-4 col-2-6"><p></p></div><!--嵌套一个p,用来调间距padding-->
+	    <div class="col-1-4 col-2-6"><p></p></div>
+	    <div class="col-1-4 col-2-12"><p></p></div>
+	  </div>
+	  <div class="row">
+	    <div class="col-1-3 col-2-3"><p></p></div>
+	    <div class="col-1-6 col-2-6"><p></p></div>
+	    <div class="col-1-3 col-2-3"><p></p></div>
+	  </div>
+	  <div class="row">
+	    <div class="col-1-1 col-2-2"><p></p></div>
+	    <div class="col-1-1 col-2-2"><p></p></div>
+	    <div class="col-1-2 col-2-8"><p></p></div>
+	    <div class="col-1-2 col-2-3"><p></p></div>
+	    <div class="col-1-6 col-2-3"><p></p></div>
+	  </div>
+	</section> 
+</body>
+</html>
