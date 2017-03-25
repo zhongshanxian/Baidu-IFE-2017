@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task11-mobile-web</title>
+	<meta charset="utf-8">
+  <meta name="author" content="xian">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <style type="text/css">
+	body
+	{
+	  margin:0;
+	  width:360px;
+	}
+	header
+	{
+	  position:absolute;
+	  width:100%;
+	  height:60px;
+	  background:#91d4da;
+	}
+	h1
+	{
+	  text-align:center;
+	  color:white;
+	  margin-top:8px;
+	}
+	.header-a
+	{
+	  text-decoration:none;
+	  color:white;
+	  position:absolute;
+	  top:-2px;
+	  font-size:27px;
+	  height:60px;
+	}
+	header img
+	{
+	  position:relative;
+	  top:12px;
+	}
+	header nav
+	{
+	  width:100%;
+	  position:relative;
+	  top:-12px;
+	}
+	header ul
+	{
+	  margin:0;
+	  padding:0;
+	}
+	header li
+	{
+	  float:left;
+	  list-style-type:none;
+	  width:20%;
+	  text-align:center;
+	}
+	header li a
+	{
+	  padding:20% 18%;
+	  text-decoration:none;
+	  font-size:20px;
+	  color:#646464;
+	  line-height:60px;
+	}
+	header li a:hover
+	{
+	  border-bottom:4px solid #91d4da;
+	}
+	.img1
+	{
+	  width:100%;
+	  height:250px;
+	  position:relative;
+	  top:115px;
+	}
+	.section1
+	{
+	  height:120px;
+	  position:relative;
+	  top:115px;
+	  border-bottom:2px solid #ccc;
+	  width:94%;
+	  margin:0 auto;
+	}
+	.section-div
+	{
+	  width:20%;
+	  text-align:center;
+	  float:left;
+	  margin-top:20px;
+	}
+	.section-img
+	{
+	  width:75%;
+	  margin-bottom:7px;
+	}
+	.section2
+	{
+	  display:flex;
+	  justify-content:space-around;
+	  position:relative;
+	  top:125px;
+	  text-align:center;
+	  margin-bottom:10px;
+	}
+	.section2 div
+	{
+	  width:33.33%;
+	  font-size:14px;
+	  color:#888;
+	  padding-bottom:5px;
+	}
+	.div2
+	{
+	  border-left:2px solid #ccc;
+	  border-right:2px solid #ccc;
+	}
+	.section2 img
+	{
+	  width:60%;
+	  margin-top:7px;
+	}
+	.section2 span
+	{
+	  font-size:18px;  
+	  color:black;
+	}
+	.section3
+	{
+	  width:100%;
+	  height:265px;
+	  position:relative;
+	  top:120px;
+	  background:#eee;
+	}
+	.section3-div1
+	{
+	  background:white;
+	  position:absolute;
+	  top:15px;
+	  width:100%;
+	  height:250px;
+	}
+	.section3-div2
+	{
+	  font-size:20px;
+	  padding:10px 0;
+	  margin:0 11px;
+	  border-bottom:2px solid #ddd;
+	}
+	.section3-img
+	{
+	  float:left;
+	  width:80px;
+	  margin:10px 5px -5px 12px;
+	  border:1px solid orange;
+	}
+	.section3 span
+	{
+	  float:left;
+	  background:#f8f8f8;
+	  font-size:19px;
+	  margin:10px 3% 0;
+	  padding:7px 18px;
+	  font-size:15px;
+	}
+	.section3-img2
+	{
+	  float:left;
+	  width:100px;
+	  margin:10px 5px -5px 12px;
+	  border:1px solid orange;
+	}
+	h3
+	{
+	  margin:9px 0 0 0;
+	}
+	.class-p
+	{
+	  font-size:12px;
+	  color:gray;
+	  position:relative;
+	  bottom:5px;
+	}
+	.section5
+	{
+	  width:100%;
+	  height:170px;
+	  height:100px;
+	  position:relative;
+	  top:96px;
+	  margin-top:20px;
+	}
+	.section5-div1 img
+	{
+	  width:27.5%;
+	  margin-bottom:10px;
+	}
+	.section5 h3
+	{
+	  padding:10px;
+	}
+	.section5 p
+	{
+	  font-size:13px;
+	  color:gray;
+	  padding:10px;
+	}
+	a,img
+	{
+	  -webkit-touch-callout:none;/*禁止长按链接与图片弹出菜单*/
+	}
+	html,body
+	{
+	  -webkit-user-select:none;
+	  user-select:none;/*禁止选中文本*/
+	}
+	footer
+	{
+	  text-align:center;
+	  position:relative;
+	  top:130px;
+	  font-size:10px;
+	  color:gray;
+	}
+  </style>
+</head>
+
+<body>
+	<header>
+	  <h1>标题</h1>
+	  <a href="#" class="header-a"><img src="https://raw.githubusercontent.com/zhongshanxian/Baidu-IFE-2017/36ac4c4f8ee421e46750f436c08d949fc29602d6/docs/assets/img/return.jpg" width=30>返回</a>
+	  <nav>
+	    <ul>
+	      <li><a href="#">导航</a></li>
+	      <li><a href="#">导航</a></li>
+	      <li><a href="#">导航</a></li>
+	      <li><a href="#">导航</a></li>
+	      <li><a href="#">导航</a></li>
+	    </ul>
+	  </nav>
+	</header>
+	<img src="https://github.com/zhongshanxian/Baidu-IFE-2017/blob/master/docs/assets/img/dark%20flower.jpg?raw=true" class="img1">
+	<section class="section1">
+	  <div class="section-div"><a href="#"><img src="https://github.com/zhongshanxian/Baidu-IFE-2017/blob/master/docs/assets/img/img2.jpg?raw=true" class="section-img"></a><br>标签</div> 
+	  <div class="section-div"><a href="#"><img src="https://github.com/zhongshanxian/Baidu-IFE-2017/blob/master/docs/assets/img/img2.jpg?raw=true" class="section-img"></a><br>标签</div> 
+	  <div class="section-div"><a href="#"><img src="https://github.com/zhongshanxian/Baidu-IFE-2017/blob/master/docs/assets/img/img2.jpg?raw=true" class="section-img"></a><br>标签</div> 
+	  <div class="section-div"><a href="#"><img src="https://github.com/zhongshanxian/Baidu-IFE-2017/blob/master/docs/assets/img/img2.jpg?raw=true" class="section-img"></a><br>标签</div> 
+	  <div class="section-div"><a href="#"><img src="https://github.com/zhongshanxian/Baidu-IFE-2017/blob/master/docs/assets/img/img2.jpg?raw=true" class="section-img"></a><br>标签</div> 
+	</section>
+	<section class="section2">
+	  <div><a href="#"><img src="https://github.com/zhongshanxian/Baidu-IFE-2017/blob/master/docs/assets/img/img3.jpg?raw=true"></a><br><span>分栏一</span><br>分栏小标题</div>
+	  <div class="div2"><a href="#"><img src="https://github.com/zhongshanxian/Baidu-IFE-2017/blob/master/docs/assets/img/img3.jpg?raw=true"></a><br><span>分栏二</span><br>分栏小标题</div>
+	  <div><a href="#"><img src="https://github.com/zhongshanxian/Baidu-IFE-2017/blob/master/docs/assets/img/img3.jpg?raw=true"></a><br><span>分栏三</span><br>分栏小标题</div>
+	</section>
+	<section class="section3">
+	  <div class="section3-div1">
+	    <div class="section3-div2">模块一</div>
+	    <div>     
+	        <img src="https://github.com/zhongshanxian/Baidu-IFE-2017/blob/master/docs/assets/img/img1.jpg?raw=true" class="section3-img"> 
+	      <p><span>这是文案</span><span>这是文案</span></p>
+	        <p><span>这是文案</span><span>这是文案</span></p>
+	        <img src="https://github.com/zhongshanxian/Baidu-IFE-2017/blob/master/docs/assets/img/img1.jpg?raw=true" class="section3-img"> 
+	        <p><span>这是文案</span><span>这是文案</span></p>
+	        <p><span>这是文案</span><span>这是文案</span></p>
+	    </div>
+	  </div>
+	</section>
+	<section class="section3">
+	  <div class="section3-div1">
+	    <div class="section3-div2">模块二</div>
+	    <div>     
+	        <img src="https://github.com/zhongshanxian/Baidu-IFE-2017/blob/master/docs/assets/img/img1.jpg?raw=true" class="section3-img"> 
+	      <p><span>这是文案</span><span>这是文案</span></p>
+	        <p><span>这是文案</span><span>这是文案</span></p>
+	        <img src="https://github.com/zhongshanxian/Baidu-IFE-2017/blob/master/docs/assets/img/img1.jpg?raw=true" class="section3-img"> 
+	        <p><span>这是文案</span><span>这是文案</span></p>
+	        <p><span>这是文案</span><span>这是文案</span></p>
+	    </div>
+	  </div>
+	</section>
+	<section class="section3" style="height:120px;">
+	  <div class="section3-div1" style="border-bottom:3px solid #ccc;height:100px;">
+	    <img src="https://github.com/zhongshanxian/Baidu-IFE-2017/blob/master/docs/assets/img/img4.jpg?raw=true" class="section3-img2"><h3>文章标题文章标题文章标题</h3><p class="class-p">文章来源 6分钟前</p>
+	  </div>
+	</section>
+	<section class="section3" style="height:97px;">
+	  <div class="section3-div1" style="border-bottom:2px solid #ccc;height:100px;margin-top:-19px;">
+	    <img src="https://github.com/zhongshanxian/Baidu-IFE-2017/blob/master/docs/assets/img/img4.jpg?raw=true" class="section3-img2"><h3>文章标题文章标题文章标题</h3><p class="class-p">文章来源 7分钟前</p>
+	  </div>
+	</section>
+	<section class="section5">
+	  <h3>文章标题文章标题文章标题</h3>
+	  <div class="section5-div1">
+	    <img src="https://github.com/zhongshanxian/Baidu-IFE-2017/blob/master/docs/assets/img/img4.jpg?raw=true" class="section3-img2">
+	    <img src="https://github.com/zhongshanxian/Baidu-IFE-2017/blob/master/docs/assets/img/img4.jpg?raw=true" class="section3-img2">
+	    <img src="https://github.com/zhongshanxian/Baidu-IFE-2017/blob/master/docs/assets/img/img4.jpg?raw=true" class="section3-img2">
+	  </div>
+	  <p>文章来源 7分钟前</p>
+	</section>
+	<footer>
+	  <p>版权所有&copy;xian
+	    <script type="text/javascript">
+	      document.write(new Date().getFullYear());
+	    </script>
+	  </p>
+	</footer>
+</body>
+</html>
