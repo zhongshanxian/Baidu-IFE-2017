@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task1-JavaScript1</title>
+	<meta charset="utf-8">
+  <meta name="author" content="xian">
+  <script type="text/javascript">
+  	function getValue() {
+		  /*    
+		  在注释下方写下代码
+		  给按钮button绑定一个点击事件
+		  在事件处理函数中
+		  获取aqi-input输入的值，并显示在aqi-display中
+		  */
+		  var text=document.getElementById("aqi-input").value;
+		  document.getElementById("aqi-display").innerText=text;
+		}
+  </script>
+<body>
+	<label>请输入北京今天空气质量：
+		<input id="aqi-input" type="text">
+	</label>
+	<button id="button" onclick="getValue();">
+		确认填写
+	</button>
+	<div>您输入的值是：
+		<span id="aqi-display">尚无录入</span>
+	</div>
+</body>
+</html>
