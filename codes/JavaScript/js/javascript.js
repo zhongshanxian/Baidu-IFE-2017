@@ -9,7 +9,7 @@ function getValue1()
 //task 2
 function paixu2()
 {
-	var aqiData = [
+  var aqiData = [
   ["北京", 90],
   ["上海", 50],
   ["福州", 10],
@@ -73,7 +73,64 @@ for(var i=1;i<resort.childNodes.length;i+=2)
   }
 }
 
-  
+//task 4
+//左侧入
+function leftIn4()
+{
+  var inputNum=document.getElementById("input4").value;
+  if(isNaN(inputNum)||inputNum=="")
+    {
+      alert("请输入数字！！");
+    }
+  else
+    {
+      createLeftLi4(inputNum);
+    }
+}
+function createLeftLi4(num){
+  var list4=document.getElementById("list4");
+  var li= document.createElement("li");
+  li.innerHTML=num;
+  list4.insertBefore(li,list4.childNodes[0]);
+}
+//右侧入
+function rightIn4()
+{
+  var inputNum=document.getElementById("input4").value;
+  if(isNaN(inputNum)||inputNum=="")
+    {
+      alert("请输入数字！！");
+    }
+  else
+    {
+      createRightLi4(inputNum);
+    }
+}
+function createRightLi4(num){
+  var list4=document.getElementById("list4");
+  var li= document.createElement("li");
+  li.innerHTML=num;
+  list4.appendChild(li);
+}
+function leftOut4()
+{
+  var list4=document.getElementById("list4");
+  var left1=confirm("确定要移除左边第一个数字："+list4.firstChild.innerHTML+" "+"吗？");
+  if(left1)
+    {
+      list4.removeChild(list4.firstChild);
+    }
+}
+function rightOut4()
+{
+  var list4=document.getElementById("list4");
+  var right1=confirm("确定要移除右边第一个数字："+list4.lastChild.innerHTML+" "+"吗？");
+  if(right1)
+    {
+      list4.removeChild(list4.lastChild);
+    }
+}
+
 
 
   
