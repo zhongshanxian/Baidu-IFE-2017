@@ -55,10 +55,8 @@
 
 		<script type="text/javascript">
 			var list4=document.getElementById("list4");
-  				list4.addEventListener("click",function(){//将指定的监听器注册到 EventTarget 上，当该对象触
-                              //发指定的事件时，指定的回调函数就会被执行。
-    	if(event.target.nodeName.toLowerCase()=="li")//将节点名小写，target 事件属性可返回事件的
-                                   //目标节点（触发该事件的节点）
+  		list4.addEventListener("click",function(){//将指定的监听器注册到 EventTarget 上，当该对象触发指定的事件时，指定的回调函数就会被执行。
+    	if(event.target.nodeName.toLowerCase()=="li")//将节点名小写，target 事件属性可返回事件的目标节点（触发该事件的节点）
 	      {
 	        var de=confirm("您确定要删除："+event.target.innerHTML+" "+"吗？");
 	        if(de)
@@ -68,6 +66,5 @@
 	      }
   		});
 		</script>
-  
 </body>
 </html>
