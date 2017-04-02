@@ -28,37 +28,37 @@
 
 ```css
 <style type="text/css">/*部分css代码*/
-  .section2/*fleex布局*/
-  {
-    display:flex;
-    justify-content:space-around;
-    position:relative;
-    top:125px;
-    text-align:center;
-    margin-bottom:10px;
-  }
-  .section2 div
-  {
-    width:33.33%;
-    font-size:14px;
-    color:#888;
-    padding-bottom:5px;
-  }
-  .div2
-  {
-    border-left:2px solid #ccc;
-    border-right:2px solid #ccc;
-  }
-  .section2 img
-  {
-    width:60%;
-    margin-top:7px;
-  }
-  .section2 span
-  {
-    font-size:18px;  
-    color:black;
-  }
+ .section2
+    {
+      display:flex;
+      height:auto;
+      justify-content:space-around;
+      margin-top:160px;
+      text-align:center;
+      margin-bottom:10px;
+    }
+    .section2 div
+    {
+      width:33.33%;
+      font-size:14px;
+      color:#888;
+      padding-bottom:5px;
+    }
+    .div2
+    {
+      border-left:2px solid #ccc;
+      border-right:2px solid #ccc;
+    }
+    .section2 img
+    {
+      width:60%;
+      margin-top:7px;
+    }
+    .section2 span
+    {
+      font-size:18px;  
+      color:black;
+    }
 </style>
 ```
 
