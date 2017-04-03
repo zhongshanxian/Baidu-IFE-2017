@@ -73,7 +73,7 @@ for(var i=1;i<resort.childNodes.length;i+=2)
   }
 }
 
-//task 4
+//task 4 函数部分
 //左侧入
 function leftIn4()
 {
