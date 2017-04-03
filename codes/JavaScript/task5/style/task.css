@@ -1,0 +1,35 @@
+/*task 4 button*/
+.button4
+{
+  width:80px;
+  height:30px;
+  border:1px solid #d45d5c;
+  background:#d45d5c;
+  color:white;
+  border-radius:4px;
+}
+#input4
+{
+  height:23px;
+  border-radius:4px;
+}
+#list4 li
+{
+  line-height:40px;
+  float:left;
+  position:absolute;
+  bottom:0;
+  list-style-type:none;
+  padding:0 7px;
+  height:40px;
+  color:white;
+  background:#d45d5c;
+  border-radius:4px;
+  text-align:center;
+}
+#list4 div
+{
+  float:left;
+  width:40px;
+  position:relative;
+}
