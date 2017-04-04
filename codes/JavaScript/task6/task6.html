@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task 6</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style/task6.css">
+	<script type="text/javascript" src="javascript/task6.js"></script>
+</head>
+<body>
+	<h1>task 4</h1>
+		<textarea rows="3" cols="30"id="input4" placeholder="请输入数字、中文、英文，可以通过用回车，逗号，顿号，空格等符号作为不同内容的间隔"></textarea>
+				<!--<input type="number" id="input4" placeholder="请输入一个数">-->
+		<br /><br />
+				<button id="leftIn" class="button4" onclick="leftIn4();">左侧入</button>
+				<button id="rightIn" class="button4" onclick="rightIn4();">右侧入</button>
+				<button id="leftOut" class="button4" onclick="leftOut4();">左侧出</button>
+				<button id="rightOut" class="button4" onclick="rightOut4();">右侧出</button>
+		<button id="clear" class="button4" onclick="clear6();">清空方块</button>
+		<br /><br />
+		<input type="text" id="search61" placeholder="请输入搜索关键字">
+		<button id="search62" class="button4" onclick="search6();">搜索</button>
+		<button id="search63" class="button4" onclick="clear62();">清除搜索</button>
+		   <ul id="list4" name="list4"></ul>
+
+	<script type="text/javascript">
+		//task 4
+			var list4=document.getElementById("list4");
+  		list4.addEventListener("click",function(){//将指定的监听器注册到 EventTarget 上，当该对象触发指定的事件时，指定的回调函数就会被执行。
+    	if(event.target.nodeName.toLowerCase()=="li")//将节点名小写，target 事件属性可返回事件的目标节点（触发该事件的节点）
+	      {
+	        var de=confirm("您确定要删除："+event.target.innerHTML+" "+"吗？");
+	        if(de)
+	          {
+	            list4.removeChild(event.target);
+	          }
+	      }
+  		});
+	</script>
+
+
+</body>
+</html>
