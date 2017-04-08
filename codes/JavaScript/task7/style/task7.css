@@ -1,0 +1,52 @@
+div
+{
+  border:1px solid #d45d5c;
+  background-color:white;
+  transition:0.2s;
+  border-radius:4px;
+}
+.one
+{
+  width:640px;
+  height:305px;
+  display:flex;
+  margin:0 auto;
+}
+.two
+{
+  width:280px;
+  height:250px;
+  margin:25px 0 0 25px;
+  display:flex;
+}
+.three
+{
+  width:100px;
+  height:200px;
+  margin:25px 0 0 25px;
+  display:flex;
+}
+.four
+{
+  width:35px;
+  height:170px;
+  margin:15px 0 0 9px;
+}
+.button6
+{
+  width:80px;
+  height:30px;
+  border:1px solid #d45d5c;
+  background:#d45d5c;
+  color:white;
+  border-radius:4px;
+  margin:0 20px;
+}
+section
+{
+  position:relative;
+  left:50%;
+  transform:translate(-50%,0);
+  width:100%;
+  text-align:center;
+}
