@@ -1,3 +1,5 @@
+/*利用延时及大量代码*/
+
 function bianlione1(){
   var one=document.getElementById("one");
   one.style.backgroundColor="#d45d5c"; 
