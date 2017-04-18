@@ -1,0 +1,60 @@
+body
+{
+  width:920px;
+  overfolw-x:scroll;
+}
+div
+{
+  border:1px solid #d45d5c;
+  background-color:white;
+  transition:0.2s;
+  border-radius:4px;
+  padding:10px;
+}
+.one
+{
+  display:flex;
+  margin:10px;
+  width:1080px;
+}
+.two
+{
+  margin:10px;
+  display:flex;
+}
+.three
+{
+  margin:10px;
+  display:flex;
+}
+.four
+{
+  height:170px;
+  margin:10px;
+}
+.five
+{
+  height:100px;
+}
+.button6
+{
+  width:80px;
+  height:30px;
+  border:1px solid #d45d5c;
+  background:#d45d5c;
+  color:white;
+  border-radius:4px;
+  margin:10px 20px;
+}
+#search1
+{
+  height:25px;
+}
+/*section
+{
+  position:relative;
+  left:50%;
+  transform:translate(-50%,0);
+  width:100%;
+  text-align:center;
+}*/
