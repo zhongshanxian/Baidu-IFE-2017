@@ -1,0 +1,36 @@
+input
+{
+  width:300px;
+  height:40px;
+  border-radius:6px;
+  border:1px solid #aaa;
+  margin:20px 10px 0;
+}
+span
+{
+  line-height:40px;
+  font-size:18px;
+}
+button
+{
+  width:80px;
+  height:43px;
+  border-radius:6px;
+  border:1px solid #d45d5c;
+  background:#d45d5c;
+  color:white;
+  font-size:18px;
+  margin-top:2px;
+}
+p
+{
+  font-size:12px;
+  margin:4px 80px;
+  color:#666;
+}
+.icon
+{
+  position:relative;
+  left:10px;
+  top:15px;
+}
