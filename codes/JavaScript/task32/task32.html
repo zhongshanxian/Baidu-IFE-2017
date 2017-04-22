@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task32</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style/task32.css">
+</head>
+
+<body>
+	<div id="main">
+	  <div id="one">
+	    <span class="span1">姓名：</span>
+	    <input type="text" id="name1" class="input1" onblur='nameblur();'>
+	    <p id="p11">名字为4-16个字符</p></div>
+	  <div id="two">
+	    <span class="span1">密码：</span>
+	    <input type="text" id="key11" class="input1" onblur='key11blur();'>
+	    <p id="p21">请输入8位密码（数字+字母）</p></div>
+	  <div id="three">
+	    <span>密码确认：</span>
+	    <input type="text" id="key12" onblur='key12blur();'>
+	    <p id="p31">再次输入相同密码</p></div>
+	  <div id="four">
+	    <span class="span1">邮箱：</span>
+	    <input type="text" id="email1" class="input1" onblur='email1blur();'>
+	    <p id="p41">请输入邮箱地址（@xx.xxx）</p></div>
+	  <div id="five">
+	    <span class="span1">手机：</span>
+	    <input type="text" id="phone1" class="input1" onblur='phone1blur();'>
+	    <p id="p51">请输入手机号</p></div>
+	  <button id="submit" class="button1">submit</button>
+	</div>
+
+<script type="text/javascript" src="javascript/task32.js"></script>
+</body>
+</html>
