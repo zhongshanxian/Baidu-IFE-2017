@@ -4,13 +4,39 @@
 	<title>task33</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style/task33.css">
-	
 </head>
+
 <body>
 <div id="main">
-	<div id="radio1"></div><div id="radio2"></div>
-  <input type="radio" name="work" id="student"><label class="work1" for="student">在校生</label>
-  <input type="radio" name="work" id="worker"><label class="work1" for="worker">非在校生</label>
+	<!--是否在校生-->
+  <div id="zai">
+    <div id="radio1"></div><div id="radio2"></div>
+    <input type="radio" name="work" id="student"><label class="work1" for="student">在校生</label>
+    <input type="radio" name="work" id="worker"><label class="work1" for="worker">非在校生</label>
+  </div>
+  <!--就读学校-->
+  <div id="school">
+    <span>学校：</span>
+    <select id="place">
+      <option id="option1">广州</option>
+      <option id="option2">上海</option>
+      <option id="option3">江苏</option>
+      <option id="option4">浙江</option>
+      <option id="option5">哈尔滨</option>
+    </select>
+    <!--选中地区，出现相对应的学校-->
+    <span id="placeschool">
+    	<select id="option11">
+	      <option>广东工业大学</option>
+	      <option>中山大学</option>
+	      <option>华南理工大学</option>
+	    </select></span>
+  </div>
+  <!--就业单位-->
+  <div id="company">
+    <span>就业单位：</span>
+    <input type="text" id="companyname">
+  </div>
 </div>
 <script type="text/javascript" src="javascript/task33.js"></script>
 </body>
