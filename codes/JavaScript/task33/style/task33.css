@@ -1,0 +1,39 @@
+#main
+{
+  width:500px;
+  margin:0 auto;
+  text-align:center;
+  position: relative;
+}
+.work1
+{
+  font-size:17px;
+  margin:15px 20px 0 5px;
+}
+input[type=radio]
+{
+  width:15px;
+  height:15px;
+}
+#radio1
+{
+  position:absolute;
+  top:-13px;
+  left:128px;
+  width:50px;
+  height:50px;
+  background: url(img/select.png) no-repeat 0 0;
+  transform: scale(0.35);
+  display: none;
+}
+#radio2
+{
+  position:absolute;
+  top:-13px;
+  left:232px;
+  width:50px;
+  height:50px;
+  background: url(img/select.png) no-repeat 0 0;
+  transform: scale(0.35);
+  display: none;
+}
