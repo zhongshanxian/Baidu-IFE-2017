@@ -47,6 +47,7 @@ searchBtn.onclick=function(){
 		setTimeout(function(){
 			tan.style.left=(tan.offsetLeft-40)+"px";//加入延时后可先执行旋转，执行完后直走
 		},800);
+		tangle=-90;
 	}
 
 	//右转指令
@@ -71,6 +72,7 @@ searchBtn.onclick=function(){
 		setTimeout(function(){
 			tan.style.left=(tan.offsetLeft+40)+"px";
 		},800);
+		tangle=90;
 	}
 
 	//后转指令
@@ -96,6 +98,7 @@ searchBtn.onclick=function(){
 		setTimeout(function(){
 			tan.style.top=(tan.offsetTop-40)+"px";
 		},800);
+		tangle=0;
 	}
 
 	//下移指令
@@ -110,6 +113,7 @@ searchBtn.onclick=function(){
 		setTimeout(function(){
 			tan.style.top=(tan.offsetTop+40)+"px";
 		},800);
+		tangle=180;
 	}
 
 	//直走指令
