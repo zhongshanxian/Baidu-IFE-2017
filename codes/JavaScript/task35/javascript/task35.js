@@ -30,10 +30,10 @@ searchBtn.onclick=function(){
 	{
 		tangle=tangle-90;
 		tan.style.transform="rotate("+tangle+"deg)";
-		if(tangle==-360)
+		/*if(tangle==-360)
 		{
 			tangle=0;//若蓝边在上，则tangle为-360-0,不可直接==0，否则会反转
-		}
+		}*/
 	}
 	//左移指令
 	if(searchText=="TRA LEF"&&tan.offsetLeft>=83)
@@ -43,11 +43,25 @@ searchBtn.onclick=function(){
 	//左转+移指令
 	if(searchText=="MOV LEF"&&tan.offsetLeft>=83)
 	{
-		tan.style.transform="rotate(-90deg)";
+		if(tangle%360==90||tangle%(-360)==-270)
+		{
+			tangle=tangle+180;
+			tan.style.transform="rotate("+tangle+"deg)";
+		}
+		else if(tangle%360==0||tangle==0||tangle%(-360)==0)
+		{
+			tangle=tangle-90;
+			tan.style.transform="rotate("+tangle+"deg)";
+		}
+		else if(tangle%360==180||tangle%(-360)==-180)
+		{
+			tangle=tangle+90;
+			tan.style.transform="rotate("+tangle+"deg)";
+		}
 		setTimeout(function(){
 			tan.style.left=(tan.offsetLeft-40)+"px";//加入延时后可先执行旋转，执行完后直走
 		},800);
-		tangle=-90;
+		//tangle=-90;
 	}
 
 	//右转指令
@@ -55,10 +69,10 @@ searchBtn.onclick=function(){
 	{
 		tangle=tangle+90;
 		tan.style.transform="rotate("+tangle+"deg)";
-		if(tangle==360)
+		/*if(tangle==360)
 		{
 			tangle=0;//若蓝边在上，则tangle为360+0,不可直接==0，否则会反转
-		}
+		}*/
 	}
 	//右移指令
 	if(searchText=="TRA RIG"&&tan.offsetLeft<=370)
@@ -68,11 +82,25 @@ searchBtn.onclick=function(){
 	//右转+移指令
 	if(searchText=="MOV RIG"&&tan.offsetLeft<=370)
 	{
-		tan.style.transform="rotate(90deg)";
+		if(tangle%360==270||tangle%(-360)==-90)
+		{
+			tangle=tangle+180;
+			tan.style.transform="rotate("+tangle+"deg)";
+		}
+		else if(tangle%360==0||tangle==0||tangle%(-360)==0)
+		{
+			tangle=tangle+90;
+			tan.style.transform="rotate("+tangle+"deg)";
+		}
+		else if(tangle%360==180||tangle%(-360)==-180)
+		{
+			tangle=tangle-90;
+			tan.style.transform="rotate("+tangle+"deg)";
+		}
 		setTimeout(function(){
 			tan.style.left=(tan.offsetLeft+40)+"px";
 		},800);
-		tangle=90;
+		//tangle=90;
 	}
 
 	//后转指令
@@ -80,10 +108,10 @@ searchBtn.onclick=function(){
 	{
 		tangle=tangle+180;
 		tan.style.transform="rotate("+tangle+"deg)";
-		if(tangle==360||tangle==-360)
+		/*if(tangle==360||tangle==-360)
 		{
 			tangle=0;
-		}
+		}*/
 	}
 
 	//上移指令
@@ -94,11 +122,25 @@ searchBtn.onclick=function(){
 	//上转+移指令
 	if(searchText=="MOV TOP"&&tan.offsetTop>=83)
 	{
-		tan.style.transform="rotate(0deg)";
+		if(tangle%360==270||tangle%(-360)==-90)
+		{
+			tangle=tangle+90;
+			tan.style.transform="rotate("+tangle+"deg)";
+		}
+		else if(tangle%360==90||tangle%(-360)==-270)
+		{
+			tangle=tangle-90;
+			tan.style.transform="rotate("+tangle+"deg)";
+		}
+		else if(tangle%360==180||tangle%(-360)==-180)
+		{
+			tangle=tangle+180;
+			tan.style.transform="rotate("+tangle+"deg)";
+		}
 		setTimeout(function(){
 			tan.style.top=(tan.offsetTop-40)+"px";
 		},800);
-		tangle=0;
+		//tangle=0;
 	}
 
 	//下移指令
@@ -109,29 +151,43 @@ searchBtn.onclick=function(){
 	//下转+移指令
 	if(searchText=="MOV BOT"&&tan.offsetTop<=363)
 	{
-		tan.style.transform="rotate(-180deg)";
+		if(tangle%360==270||tangle%(-360)==-90)
+		{
+			tangle=tangle-90;
+			tan.style.transform="rotate("+tangle+"deg)";
+		}
+		else if(tangle%360==0||tangle==0||tangle%(-360)==0)
+		{
+			tangle=tangle+180;
+			tan.style.transform="rotate("+tangle+"deg)";
+		}
+		else if(tangle%360==90||tangle%(-360)==-270)
+		{
+			tangle=tangle+90;
+			tan.style.transform="rotate("+tangle+"deg)";
+		}
 		setTimeout(function(){
 			tan.style.top=(tan.offsetTop+40)+"px";
 		},800);
-		tangle=180;
+		//tangle=180;
 	}
 
 	//直走指令
 	if(searchText=="GO")
 	{
-		if((tangle==0)&&tan.offsetTop>=83)//规定范围，放置走出棋盘
+		if((tangle%360==0||tangle==0||tangle%(-360)==0)&&tan.offsetTop>=83)//规定范围，放置走出棋盘
 			{
 				tan.style.top=(tan.offsetTop-40)+"px";
 			}
-		if((tangle==270||tangle==-90)&&tan.offsetLeft>=90)//蓝边在左，规定范围，放置走出棋盘
+		if((tangle%360==270||tangle%(-360)==-90)&&tan.offsetLeft>=90)//蓝边在左，规定范围，放置走出棋盘
 			{
 				tan.style.left=(tan.offsetLeft-40)+"px";
 			}
-		if((tangle==180||tangle==-180)&&tan.offsetTop<=363)//蓝边在下，规定范围，放置走出棋盘
+		if((tangle%360==180||tangle%(-360)==-180)&&tan.offsetTop<=363)//蓝边在下，规定范围，放置走出棋盘
 			{
 				tan.style.top=(tan.offsetTop+40)+"px";
 			}
-		if((tangle==90||tangle==-270)&&tan.offsetLeft<=370)//蓝边在右，规定范围，放置走出棋盘
+		if((tangle%360==90||tangle%(-360)==-270)&&tan.offsetLeft<=370)//蓝边在右，规定范围，放置走出棋盘
 			{
 				tan.style.left=(tan.offsetLeft+40)+"px";
 			}
