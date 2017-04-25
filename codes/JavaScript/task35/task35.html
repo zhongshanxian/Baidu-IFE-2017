@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task34</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style/task35.css">
+</head>
+
+<body>
+	<!--画布的宽高要在这里设置，否则棋盘不完整-->
+	<div id="main">
+		<p id="p1">1 2 3 4 5 6 7 8 9 10</p>
+		<p id="p2">1 2 3 4 5 6 7 8 9 10</p>
+		<canvas id="chess" width="400px" height="400px"></canvas>
+		<div id="tan"></div>
+		<input type="text" id="searchText">
+		<input type="button" id="searchBtn" value="move"> 
+	</div>
+
+	<div id="order">
+		<p>请输入指令，移动方块</p>
+		<p>TUN LEF: 向左旋转 90°</p>
+		<p>TUN RIG: 向右旋转 90°</p>
+		<p>TUN BAC: 向左旋转 180°</p>
+		<p>GO: 向着蓝边的方向前进一步</p>
+		<p>TRA LEF：向屏幕的左侧移动一格，方向不变</p>
+		<p>TRA TOP：向屏幕的上面移动一格，方向不变</p>
+		<p>TRA RIG：向屏幕的右侧移动一格，方向不变</p>
+		<p>TRA BOT：向屏幕的下面移动一格，方向不变</p>
+		<p>MOV LEF：方向转向屏幕左侧，向屏幕的左侧移动一格</p>
+		<p>MOV TOP：方向转向屏幕上面，向屏幕的上面移动一格</p>
+		<p>MOV RIG：方向转向屏幕右侧，向屏幕的右侧移动一格</p>
+		<p>MOV BOT：方向转向屏幕下面，向屏幕的下面移动一格</p>
+	</div>
+
+<script type="text/javascript" src="javascript/task35.js"></script>
+</body>
+
+</html>

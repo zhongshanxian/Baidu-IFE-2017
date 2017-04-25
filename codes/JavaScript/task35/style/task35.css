@@ -1,0 +1,80 @@
+body
+{
+	width:750px;
+	overflow-x: scroll;
+}
+#main
+{
+	position: relative;
+	border:1px solid white;
+	width:500px;
+}
+#order
+{
+	position: absolute;
+	left:550px;
+	top:20px;
+	width: 400px;
+}
+#chess
+{
+	margin:40px auto;
+	display: block;
+	border:3px solid #666;
+}
+#p1
+{
+	font-size: 20px;
+	font-weight: 600;
+	word-spacing:22px;
+	position: absolute;
+	top:-10px;
+	left:58px;
+	width:440px;
+}
+#p2
+{
+	font-size: 20px;
+	font-weight: 600;
+	width:20px;
+	position: absolute;
+	top:20px;
+	left:20px;
+	line-height:40px;
+}
+#searchText
+{
+	width:120px;
+	height:35px;
+	position: relative;
+	top:-30px;
+	margin: 0 0 0 45px;
+	border-radius: 5px;
+	border:1px solid #666;
+}
+#searchBtn
+{
+	width:80px;
+	height:35px;
+	background: #d45d5c;
+	border-radius: 5px;
+	border:1px solid #d45d5c;
+	position: relative;
+	top:-30px;
+	font-size: 17px;
+	color:white;
+}
+/*方块*/
+#tan
+{
+	width:41px;
+	height:33px;
+	background: #d41111;
+	z-index: 100;
+	position: absolute;
+	top:203px;
+	left:250px;
+	transform:rotate(0deg);
+	border-top: 7px solid blue;
+	-webkit-transition: all .8s cubic-bezier(0, 0, 0, 0.98);/*动画*/
+}
