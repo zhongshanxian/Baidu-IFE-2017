@@ -1,0 +1,168 @@
+ * 
+{
+  margin:0;
+  padding:0;
+}
+#main 
+{
+  width:auto;
+  float:left;
+  margin:20px;
+  background-image:url(http://pic.baike.soso.com/p/20130522/20130522171955-500631263.jpg);
+  padding:20px;
+  border:2px solid #558B8B;
+}
+#two-columns
+{
+  float:left;
+  width:100%;
+  margin-right:-195px;
+}
+#team
+{
+  width:200px;
+  float:left;
+  border:2px solid #ccc;
+  background:white;
+  padding:15px;
+  box-sizing:border-box;
+}
+#team p
+{
+  padding-top:35px;
+  text-shadow:0 0 1px #f77;
+}
+#team img
+{
+  float:left;
+}
+#introduce
+{
+  width:auto;
+  /*float:left;  */
+  border:2px solid #ccc;
+  background:white;
+  margin-left:220px;
+  margin-right:215px;
+  padding:20px;
+  box-sizing:border-box;
+}
+#introduce p
+{
+  text-indent:2em;
+}
+#team > a:link{color:#A52A2A;text-decoration:none;}
+h4 > a:link{color:#6495ED;text-decoration:none;}
+.first-letter
+{
+  color:#008B00;
+}
+#person
+{
+  width:150px;
+  float:left;
+  border:2px solid #ccc;
+  background:white;
+  padding:20px;
+}
+#person img
+{
+  margin:15px 20px 12px 20px;
+  box-shadow:0 0 7px black;
+}
+footer
+{
+  font-size:12px;
+  text-align:center;
+}
+/*小屏显示滚动条*/
+@media only screen and (max-width:959px)
+{
+  body
+  {
+    overflow-x:scroll;
+    width:944px;
+  }
+}
+#login
+{
+	width: 100px;
+	height: 30px;
+	color:white;
+	background: #d45d5c;
+	border:1px solid #d45d5c;
+	border-radius: 5px;
+	font-size: 19px;
+	margin:20px 0 0 0;
+	margin-left: 30px;
+}
+#mask
+{
+	width:100vw;
+	height: 100vh;
+	background: rgba(0,0,0,0.8);
+	z-index: 300;
+	position: fixed;
+	display: none;
+}
+#close1
+{
+	width:450px;
+	height:260px;
+	background: rgba(255,255,255,0.8);
+	text-align: center;
+	border-radius: 3px;
+	margin: 200px auto;
+	display: none;
+	-webkit-transition: all.3s cubic-bezier(0, 0.58, 0.54, 1.32);/*动画*/
+}
+#yes
+{
+	width:120px;
+	height:80px;
+	font-size: 11px;
+	background: rgba(255,255,255,0.8);
+	text-align: center;
+	border-radius: 3px;
+	margin: 270px auto;
+	display: none;
+	-webkit-transition: all.3s cubic-bezier(0, 0.58, 0.54, 1.32);/*动画*/
+}
+#yes img
+{
+	margin-bottom: -10px;
+}
+#close1 p
+{
+	padding-top: 40px;
+}
+#close1 img
+{
+	position: absolute;
+	right:5px;
+	top:5px;
+	cursor: pointer;
+}
+#zhanghao,#key
+{
+	width:300px;
+	height: 40px;
+	border: 1px solid #aaa;
+	border-radius: 5px;
+}
+#zhanghao
+{
+	margin:20px 0 20px 0;
+}
+#comein
+{
+	width: 120px;
+	height: 40px;
+	color:white;
+	background: #d45d5c;
+	border:1px solid #d45d5c;
+	border-radius: 5px;
+	font-size: 19px;
+	margin:20px 0 0 0;
+	cursor: pointer;
+}
