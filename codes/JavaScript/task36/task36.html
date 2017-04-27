@@ -62,19 +62,24 @@
 	</div>
 	<!--遮罩层-->
 	<div id="mask">
-		<div id="close1">
-			<form id="come">
-				<img src="style/img/close.png" width="25px" height="25px" id="close2">
-				<p>请登录您的账号及密码</p>
-				账号：<input type="text" id="zhanghao"><br>
-				密码：<input type="text" id="key">
-				<input type="button" id="comein" value="login">
-			</form>
-		</div>
-		<div id="yes">
-			<img src="style/img/ok.png" width="60px" height="60px">
-			<p>登录成功</p>
-		</div>
+		<div id="closep">
+			<div id="size1">
+				<div id="close1" removeable>
+					<form id="come">
+						<img src="style/img/close.png" width="25px" height="25px" id="close2">
+						<p id="p1">请登录您的账号及密码(点击白色区域可拖动)</p>
+						账号：<input type="text" id="zhanghao"><br>
+						密码：<input type="text" id="key">
+						<p style="font-size: 10px">若账号密码为空，点击登录无反应</p>
+						<input type="button" id="comein" value="login">
+					</form>
+				</div>
+				<div id="yes">
+					<img src="style/img/ok.png" width="60px" height="60px">
+					<p>登录成功</p>
+				</div>
+		  </div>
+	  </div>
 	</div>
 	
 <script type="text/javascript" src="javascript/task36.js"></script>
