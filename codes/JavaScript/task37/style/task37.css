@@ -1,0 +1,55 @@
+table
+{
+  border-right:2px solid #bbb;
+  border-bottom:2px solid #bbb;
+  text-align:center;
+  margin:0 auto;
+}
+tr,td
+{
+	border-left:2px solid #bbb;
+  border-top:2px solid #bbb;
+}
+thead
+{
+	background: rgba(50,50,50,0.8);
+	color: white;
+}
+td
+{
+	width:120px;
+	height:40px;
+	position: relative;
+}
+.up
+{
+	position: absolute;
+	top:8px;
+	right: 12px;
+	cursor: pointer;
+}
+.down
+{
+	position: absolute;
+	top:21px;
+	right: 12px;
+	cursor: pointer;
+}
+button
+{
+	width:100px;
+	height: 35px;
+	color: white;
+	background: #d45d5c;
+	border-radius: 5px;
+	border:1px solid #d45d5c;
+}
+.btn
+{
+	width:250px;
+	margin:30px auto;
+}
+.trclass
+{
+	height:40px;
+}
