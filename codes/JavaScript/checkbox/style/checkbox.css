@@ -1,0 +1,52 @@
+input[type=radio] {
+  visibility: hidden;/*hidden表示隐藏但是保留位置，若设置block=none；则不保留位置*/
+}
+
+input[type=checkbox] {
+  visibility: hidden;
+}
+
+input[type=radio]::after/*若为before，则前面的样式会遮盖后面的，点击后无法转换*/
+{
+  content: ' ';
+  display: block;
+  height: 16px;
+  width: 16px;
+  background-image: url('img/check.png');
+  background-repeat: no-repeat;
+  background-position: -17px -8px;
+  background-size:75px 40px;
+  visibility: visible;
+}
+
+input[type=radio]:checked::after {/*点击之后添加样式，check是伪类，after是伪元素*/
+  background-image: url('img/check.png');
+  background-repeat: no-repeat;
+  background-position: -42px -8px;
+  background-size:75px 40px;
+  visibility: visible;
+  height: 16px;
+  width: 16px;
+}
+input[type=checkbox]::after/*若为before，则前面的样式会遮盖后面的，点击后无法转换*/
+{
+  content: ' ';
+  display: block;
+  height: 16px;
+  width: 16px;
+  background-image: url('img/check.png');
+  background-repeat: no-repeat;
+  background-position: -17px -25px;
+  background-size:75px 40px;
+  visibility: visible;
+}
+
+input[type=checkbox]:checked::after {/*点击之后添加样式，check是伪类，after是伪元素*/
+  background-image: url('img/check.png');
+  background-repeat: no-repeat;
+  background-position: -42px -25px;
+  background-size:75px 40px;
+  visibility: visible;
+  height: 16px;
+  width: 16px;
+}
