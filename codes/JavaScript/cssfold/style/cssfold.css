@@ -1,0 +1,46 @@
+#item1:checked::after
+{
+  content:"To get an idea of how different form <input> types look,try editing the value of the type attributes in the following To get an idea of how different form <input> types look,try editing the value of the type attributes in the following";
+}
+#item2:checked::after
+{
+  content:" A check box. You must use the value attribute to define the value submitted by this item. Use the checked attribute to indicate whether this item is selected. You can also use the indeterminate attribute (which can only be set programmatically) to indicate that the checkbox is in an indeterminate ";
+}
+#item3:checked::after
+{
+  content:" A graphical submit button. You must use the src attribute to define the source of the image and the alt attribute to define alternative text. You can use the height and width attributes to define the size of the image in pixels.";
+}
+input[type=radio] {
+  visibility: hidden;/*hidden表示隐藏但是保留位置，若设置block=none；则不保留位置*/
+  width:1px;
+  height:1px;
+  margin-top: 5px;
+}
+input[type=radio]:checked::after
+{
+	font-size: 16px;
+	padding:5px;
+	display:block;
+  width:361px;
+  height:120px;
+  border:1px solid  #ccc;
+  background: white;
+  visibility: visible;
+  margin-top: 5px;
+}
+input[type=radio]:checked
+{
+	width:371px;
+	height: 145px;
+	margin-top: 3px;
+}
+label
+{
+	width:370px;
+	height:40px;
+	border:1px solid  #d42222;
+  background: #d45d5c;
+  color:white;
+  padding: 5px 255px 8px 5px;
+  margin-left: 5px;
+}
