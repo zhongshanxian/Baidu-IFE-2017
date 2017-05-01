@@ -5,7 +5,18 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style/cssloading.css">
 </head>
+
 <body>
-<script type="text/javascript" src="javascript/cssloading.js"></script>
+<!--外面的圆弧-->
+<div class="outerc"></div>
+	<div id="innerc"><!--深色底圆，防止底圆与圆弧一起转，所以分开-->
+		<div id="left"><!--深色左遮盖层-->
+			<div id="leftunder"></div><!--艳色左层-->
+		</div>
+		<div id="right"><!--深色右遮盖层-->
+			<div id="rightunder"></div><!--艳色右层-->
+		</div>
+	</div>
+
 </body>
 </html>
