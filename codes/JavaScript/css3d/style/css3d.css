@@ -25,7 +25,7 @@ img/*设定图片大小*/
 }
 .sec2/*用来放置旋转层*/
 {
-	transform-style: preserve-3d;
+	transform-style: preserve-3d;/*style为3d*/
 	-webkit-transform-style: preserve-3d;
   animation: rotate-frame 15s cubic-bezier(0, 0.99, 0.74, 1.04) infinite;/*旋转动画*/
   -webkit-animation: rotate-frame 15s cubic-bezier(0, 0.99, 0.74, 1.04) infinite;
