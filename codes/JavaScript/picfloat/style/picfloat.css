@@ -110,7 +110,7 @@ h1
   font-size: 40px;
   margin-top: 100px;
   transform: translate(0,20px);/*当模糊消失时，文字下移*/
-  transition: transform .8s,opacity .8s;
+  transition: transform .8s,opacity .8s;/*下移和透明度花的时间*/
 }
 .container:hover h1
 {
