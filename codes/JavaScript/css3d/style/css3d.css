@@ -1,0 +1,181 @@
+*/*reset*/
+{
+	margin:0;
+	padding:0;
+}
+img/*设定图片大小*/
+{
+	width: 210px;
+	height:140px;
+}
+.sec1/*最外框，控制perspective，perspective不能和旋转放在同一个层，否则perspective会跟着转*/
+{
+	width: 800px;
+	height: 180px;
+	perspective: 800px;
+	-webkit-perspective: 800px;
+  perspective-origin: 50% 50%;
+  -webkit-perspective-origin: 50% 50%;
+  margin:150px auto;
+}
+.sec1:hover
+{
+	animation-play-state: paused;/*鼠标放在上面，停止转动*/
+	-webkit-animation-play-state: paused;
+}
+.sec2/*用来放置旋转层*/
+{
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+  animation: rotate-frame 15s cubic-bezier(0, 0.99, 0.74, 1.04) infinite;/*旋转动画*/
+  -webkit-animation: rotate-frame 15s cubic-bezier(0, 0.99, 0.74, 1.04) infinite;
+}
+div/**装图片的框*/
+{
+	width: 210px;
+	height:140px;
+	position: absolute;/*位置*/
+	top: 50%;
+	left: 35%;
+	padding:5px;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	box-shadow: 0 0 10px rgba(0,0,0,0.8) inset;/*内阴影*/
+	/*倒影*/
+	-webkit-box-reflect:below 3px -webkit-linear-gradient(top,rgba(0,0,0,0) 70%,rgba(0,0,0,0.5));
+}
+/*设定图片一开始的位置，每张角度45度*/
+#photo1
+{
+	transform: rotateY(0deg) translateZ(330px);
+	-webkit-transform: rotateY(0deg) translateZ(330px);
+}
+#photo2
+{
+	transform: rotateY(45deg) translateZ(330px);
+	-webkit-transform: rotateY(45deg) translateZ(330px);
+}
+#photo3
+{
+	transform: rotateY(90deg) translateZ(330px);
+	-webkit-transform: rotateY(90deg) translateZ(330px);
+}
+#photo4
+{
+	transform: rotateY(135deg) translateZ(330px);
+	-webkit-transform: rotateY(135deg) translateZ(330px);
+}
+#photo5
+{
+	transform: rotateY(180deg) translateZ(330px);
+	-webkit-transform: rotateY(180deg) translateZ(330px);
+}
+#photo6
+{
+	transform: rotateY(225deg) translateZ(330px);
+	-webkit-transform: rotateY(225deg) translateZ(330px);
+}
+#photo7
+{
+	transform: rotateY(270deg) translateZ(330px);
+	-webkit-transform: rotateY(270deg) translateZ(330px);
+}
+#photo8
+{
+	transform: rotateY(315deg) translateZ(330px);
+	-webkit-transform: rotateY(315deg) translateZ(330px);
+}
+@keyframes rotate-frame {/*8张图片，每张事件12.5%，且停留4%时间*/
+    0%,
+    4% {
+        -webkit-transform: rotateY(0deg);
+                transform: rotateY(0deg);
+    }
+    12.5%,
+    16.5% {
+        -webkit-transform: rotateY(-45deg);
+                transform: rotateY(-45deg);
+    }
+    25%,
+    29% {
+        -webkit-transform: rotateY(-90deg);
+                transform: rotateY(-90deg);
+    }
+    37.5%,
+    41.5% {
+        -webkit-transform: rotateY(-135deg);
+                transform: rotateY(-135deg);
+    }
+    50%,
+    54% {
+        -webkit-transform: rotateY(-180deg);
+                transform: rotateY(-180deg);
+    }
+    62.5%,
+    66.5% {
+        -webkit-transform: rotateY(-225deg);
+                transform: rotateY(-225deg);
+    }
+    75%,
+    79% {
+        -webkit-transform: rotateY(-270deg);
+                transform: rotateY(-270deg);
+    }
+    87.5%,
+    91.5% {
+        -webkit-transform: rotateY(-315deg);
+                transform: rotateY(-315deg);
+    }
+    100% {
+        -webkit-transform: rotateY(-360deg);
+                transform: rotateY(-360deg);
+    }
+}
+@-webkit-keyframes rotate-frame {
+    0%,
+    4% {
+        -webkit-transform: rotateY(0deg);
+                transform: rotateY(0deg);
+    }
+    12.5%,
+    16.5% {
+        -webkit-transform: rotateY(-45deg);
+                transform: rotateY(-45deg);
+    }
+    25%,
+    29% {
+        -webkit-transform: rotateY(-90deg);
+                transform: rotateY(-90deg);
+    }
+    37.5%,
+    41.5% {
+        -webkit-transform: rotateY(-135deg);
+                transform: rotateY(-135deg);
+    }
+    50%,
+    54% {
+        -webkit-transform: rotateY(-180deg);
+                transform: rotateY(-180deg);
+    }
+    62.5%,
+    66.5% {
+        -webkit-transform: rotateY(-225deg);
+                transform: rotateY(-225deg);
+    }
+    75%,
+    79% {
+        -webkit-transform: rotateY(-270deg);
+                transform: rotateY(-270deg);
+    }
+    87.5%,
+    91.5% {
+        -webkit-transform: rotateY(-315deg);
+                transform: rotateY(-315deg);
+    }
+    100% {
+        -webkit-transform: rotateY(-360deg);
+                transform: rotateY(-360deg);
+    }
+}
+
+
