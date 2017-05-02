@@ -1,0 +1,127 @@
+body
+{
+	background-color: black;
+}
+.container/*设置居中*/
+{
+	width:440px;
+	position: relative;
+	margin:100px auto;
+	background-color: white;
+	border-radius: 3px;
+}
+.boxpar
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.box/*相对于按钮边框，box是父元素*/
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	text-align: center;
+	border:3px solid transparent;
+	opacity: 0;/*没有悬浮鼠标时，不显示box*/
+	transition: opacity .8s;/*透明过程0.8s*/
+}
+.box::before/*左右边框*/
+{
+	content:" ";
+	border:2px solid white;
+	border-width: 0 2px;
+	position: absolute;
+	width: 0;/*一开始0*/
+	height: 0;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+.box::after/*上下边框*/
+{
+	content:" ";
+	border:2px solid white;
+	border-width: 2px 0;
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+.container:hover .box::before/*悬浮时出现边框*/
+{
+	position: absolute;
+	width: 80%;
+	height: 65%;
+	top: 50%;
+	left:50%;
+}
+.container:hover .box::after
+{
+	position: absolute;
+	width: 75%;
+	height: 70%;
+	top: 50%;
+	left:50%;
+}
+.box::before 
+{
+  transition: all .8s;/*转换时间0.8s*/
+}
+
+.box::after 
+{
+  transition: all .8s;
+}
+.container:hover .box/*悬浮时出现box*/
+{
+	opacity: 1;
+}
+.container:hover img
+{
+	/*animation: blurimg1 15s cubic-bezier(0, 0.56, 0.78, 1.32) infinite;*/
+	filter: blur(3px);
+}
+img
+{
+	margin:20px;
+	width: 400px;
+}
+
+/*@keyframes blurimg1
+{
+	0%{filter: blur(0px);}
+	25%{filter: blur(0px);}
+	30%{filter: blur(4px);}
+	95%{filter: blur(4px);}
+	100%{filter: blur(0px);}
+}*/
+h1
+{
+	background-image: -webkit-linear-gradient(left,#D81159, #E53A40 10%, #FFBC42 20%, #75D701 30%, #30A9DE 40%,#D81159 50%, #E53A40 60%, #FFBC42 70%, #75D701 80%, #30A9DE 90%,#D81159);
+  color:transparent;/*将字体设置为透明，可以看见底层的渐变色*/
+  -webkit-background-clip: text;/*背景裁剪（将背景裁剪作为文本的填充色)*/
+  background-size: 200% 100%;/*流光动画的原理是将文字的背景色的宽度拉长至原来的两倍*/
+  animation: flowlight 5s linear infinite;
+  font-weight: 400;
+  font-size: 40px;
+  margin-top: 100px;
+  transform: translate(0,20px);/*当模糊消失时，文字下移*/
+  transition: transform .8s,opacity .8s;
+}
+.container:hover h1
+{
+	transform: translate(0);/*出现模糊时取消下移*/
+	opacity: 1;
+}
+@keyframes flowlight {
+  0% {
+    background-position: 0 0;/*200%中的0-100%*/
+  }
+  100% {
+    background-position: -100% 0;/*200%中的100%-200%*/
+  }
+}
