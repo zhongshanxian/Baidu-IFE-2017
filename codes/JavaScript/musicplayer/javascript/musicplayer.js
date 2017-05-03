@@ -1,0 +1,1 @@
+timego.innerHTML="2:50";

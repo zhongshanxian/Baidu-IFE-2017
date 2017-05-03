@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>musicplayer</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style/musicplayer.css">
+</head>
+
+<body>
+
+<div class="container">
+
+	<audio src="song/hetuhuyan.mp3">您的浏览器不支持HTML 5的audio属性!</audio>
+	<!--
+		<source src="song/hetuhuyan.mp3" type="audio/mpeg"> 
+		<source src="song/dongliqianniankongcheng.mp3" type="audio/mpeg"> 
+		<source src="song/hetubuliangren.mp3" type="audio/mpeg"> 
+		<source src="song/HITAcaiwei.mp3" type="audio/mpeg"> 
+		<source src="song/HITAmeijianxue.mp3" type="audio/mpeg">
+	--> 
+	<!--信息栏-->
+	<div class="con-left">
+		<h1 id="songname">狐言</h1>
+		<h3 id="songsinger">河图</h3>
+		<p><span id="timego">2:20</span>/<span id="timeall">3:31</span></p>
+		<input type="range" id="timerange">
+	</div>
+	<!--滚动图片栏-->
+	<div class="con-right"><img src="style/img/pic1.jpg" class="styleimg"></div>	
+
+</div>
+<script type="text/javascript" src="javascript/musicplayer.js"></script>
+</body>
+</html>
