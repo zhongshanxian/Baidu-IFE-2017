@@ -173,7 +173,35 @@ download1.onclick=function(){
 	console.log("download");
 }
 addfile1.onclick=function(){
-	link1.href=timerange.src;
-	link1.innerHTML="点击链接即可保存："+timerange.src;
-	console.log("点击链接即可保存");
+	var addsongname=prompt("添加的歌名（不能为空）：","");
+	var addsongsinger=prompt("添加的歌曲的歌手（不能为空）：","");
+	var addsongimg=prompt("添加的歌曲的图片（不能为空）：","");
+	var addsongsource=prompt("添加的歌曲的详细路径（不能为空）：","");
+	if(addsongname==""||addsongsinger==""||addsongimg==""||addsongsource==""||addsongname==" "||addsongsinger==" "||addsongimg==" "||addsongsource==" ")
+	{
+		alert("输入内容不符合要求，添加失败！");
+	}
+	else
+	{
+		if(addsongname)
+		{
+			arrsongname.push(addsongname);
+		}
+		if(addsongsinger)
+		{
+			arrsongsinger.push(addsongsinger);
+		}
+		if(addsongimg)
+		{
+			arrsongimg.push(addsongimg);
+		}
+		if(addsongsource)
+		{
+			songsource.push(addsongsource);
+		}
+	}
+	console.log(arrsongname);
+	console.log(arrsongsinger);
+	console.log(arrsongimg);
+	console.log(songsource);
 }
