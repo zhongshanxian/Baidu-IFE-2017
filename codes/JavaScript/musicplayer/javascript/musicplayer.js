@@ -21,9 +21,11 @@ var end=setInterval(function(){
 		songnum++;
 		nextsong();
 		console.log("shunxu");
+		link1.innerHTML=" ";
 	}
 	else if((timerange.ended&&flag==1))
 	{
+	  link1.innerHTML=" ";
 	  var endsuiji=setInterval(function(){
 	  	if(timerange.ended)
 	  	{
@@ -41,6 +43,7 @@ var end=setInterval(function(){
 	}
 	else if((timerange.ended&&flag==2))
 	{
+		link1.innerHTML=" ";
 		timerange.setAttribute('loop',true);
 		console.log("danqu");
 	}
@@ -67,6 +70,7 @@ var end=setInterval(function(){
 },1000);
 console.log(timerange.src);
 nextmic.onclick=function(){
+	link1.innerHTML=" ";
 	miclovefull.style.display="none";
 	miclove.style.display="block";
 	if(flag==0)
@@ -162,4 +166,14 @@ danqu.onclick=function(){
 	shunxu.style.display="block";
 	suiji.style.display="none";
 	danqu.style.display="none";
+}
+download1.onclick=function(){
+	link1.href=timerange.src;
+	link1.innerHTML="点击链接即可下载："+timerange.src;
+	console.log("download");
+}
+addfile1.onclick=function(){
+	link1.href=timerange.src;
+	link1.innerHTML="点击链接即可保存："+timerange.src;
+	console.log("点击链接即可保存");
 }
