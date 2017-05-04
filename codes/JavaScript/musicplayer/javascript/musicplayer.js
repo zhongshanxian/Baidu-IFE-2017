@@ -1,55 +1,53 @@
+//将对应的歌曲src，图片，歌名，歌手放进数组中，用一个index即可获取相对应的信息
 var songsource=["song/hetuhuyan.mp3","song/dongliqianniankongcheng.mp3","song/hetubuliangren.mp3","song/HITAcaiwei.mp3","song/HITAmeijianxue.mp3"];
 var arrsongimg=["style/img/huyan.jpg","style/img/qianniankongcheng.jpg","style/img/buliangren.jpg","style/img/caiwei.jpg","style/img/meijianxue.jpg"];
 var arrsongname=["狐言","千年空城","不良人","采薇","眉间雪"];
 var arrsongsinger=["河图","东篱","河图","HITA","HITA"];
+//定义songnum，喜爱歌曲的数组，用flag判断播放模式
 var songnum=0,lovelist=[],flag=0;
 
-console.log(shunxu.style.display);
+//暂停按钮点击后，出现播放按钮
 micpause.onclick=function(){
-	timerange.play();
+	timerange.play();//控制音频播放
 	micplay.style.display="block";
 	micpause.style.display="none";
 }
+
+//播放按钮点击后，出现暂停按钮
 micplay.onclick=function(){
-	timerange.pause();
+	timerange.pause();//控制音频暂停
 	micplay.style.display="none";
 	micpause.style.display="block";
 }
+
+//每隔一秒检查是否结束
 var end=setInterval(function(){
-	if((timerange.ended&&flag==0))
+	if((timerange.ended&&flag==0))//结束后且为顺序模式，则按顺序继续下一首
 	{
 		songnum++;
-		nextsong();
-		console.log("shunxu");
-		link1.innerHTML=" ";
+		nextsong();//调用下一首歌函数
+		link1.innerHTML=" ";//删除下载链接
 	}
-	else if((timerange.ended&&flag==1))
+	else if((timerange.ended&&flag==1))//结束后且为随机模式，则按随机继续下一首
 	{
-	  link1.innerHTML=" ";
-	  var endsuiji=setInterval(function(){
+	  link1.innerHTML=" ";//删除下载链接
+	  var endsuiji=setInterval(function(){//每个一秒获取随机数
 	  	if(timerange.ended)
 	  	{
-	  		songnum=Math.floor(Math.random()*arrsongsinger.length);
-	  		nextsong();
-	  		console.log("suiji");
+	  		songnum=Math.floor(Math.random()*arrsongsinger.length);//获取0-有多少首歌的随机数
+	  		nextsong();//调用下一首歌函数
 	  	}
-	  	nextmic.onclick=function(){
-				miclovefull.style.display="none";
-				miclove.style.display="block";
-				songnum=Math.floor(Math.random()*arrsongsinger.length);
-				nextsong();
-			}
 	  },1000);
 	}
-	else if((timerange.ended&&flag==2))
+	else if((timerange.ended&&flag==2))//结束后且为单曲模式，则不断循环
 	{
 		link1.innerHTML=" ";
-		timerange.setAttribute('loop',true);
-		console.log("danqu");
+		timerange.setAttribute('loop',true);//给audio设置loop循环属性
 	}
-	var minute1=parseInt(Math.round(timerange.currentTime)/60);
-	var second1=parseInt(Math.round(timerange.currentTime)%60);
-	if(second1<10)
+	//获取当前时间
+	var minute1=parseInt(Math.round(timerange.currentTime)/60);//获取分钟
+	var second1=parseInt(Math.round(timerange.currentTime)%60);//获取秒
+	if(second1<10)//秒的显示
 	{
 		timego.innerHTML=minute1+":0"+second1;
 	}
@@ -57,8 +55,9 @@ var end=setInterval(function(){
 	{
 		timego.innerHTML=minute1+":"+second1;
 	}
-	var minute2=parseInt(Math.round(timerange.duration)/60);
-	var second2=parseInt(Math.round(timerange.duration)%60);
+	//获取总时间
+	var minute2=parseInt(Math.round(timerange.duration)/60);//获取分钟
+	var second2=parseInt(Math.round(timerange.duration)%60);//获取秒
 	if(second2<10)
 	{
 		timeall.innerHTML=minute2+":0"+second2;
@@ -68,35 +67,37 @@ var end=setInterval(function(){
 		timeall.innerHTML=minute2+":"+second2;
 	}
 },1000);
-console.log(timerange.src);
+
+//nextmic点击则songnum++
 nextmic.onclick=function(){
 	link1.innerHTML=" ";
-	miclovefull.style.display="none";
+	miclovefull.style.display="none";//清除love显示
 	miclove.style.display="block";
 	if(flag==0)
 	{
-		songnum++;
-		console.log("shunxu");
+		songnum++;//顺序模式，点击下一首则下一首
 	}
 	else if(flag==1)
 	{
-		songnum=Math.floor(Math.random()*arrsongsinger.length);
+		songnum=Math.floor(Math.random()*arrsongsinger.length);//随机模式，点击下一首则随机获取下一首
 	}
-	else if((timerange.ended&&flag==2))
+	else if(flag==2)
 	{
-		console.log("danqu");
+		songnum++;//单曲模式，点击下一首则下一首
 	}
-	nextsong();
+	nextsong();//调用下一首函数
 }
+
+//下一首函数
 function nextsong(){
-	if(songnum<arrsongsinger.length)
+	if(songnum<arrsongsinger.length)//当songnum<总歌数
 	{
-		songname.innerHTML=arrsongname[songnum];
+		songname.innerHTML=arrsongname[songnum];//显示对应信息
 		songsinger.innerHTML=arrsongsinger[songnum];
 		songimg.src=arrsongimg[songnum];
 		timerange.src=songsource[songnum];
 	}
-	if(songnum>=arrsongsinger.length)
+	if(songnum>=arrsongsinger.length)//大于则回归0
 	{
 		songnum=0;
 		songname.innerHTML=arrsongname[songnum];
@@ -107,18 +108,22 @@ function nextsong(){
 	micplay.style.display="block";
 	micpause.style.display="none";
 	timerange.play();
+	//显示对应的lovebtn
 	for(var i=0;i<lovelist.length;i++)
 	{
-		if(lovelist[i]==timerange.src)
+		if(lovelist[i]==timerange.src)//有则显示，无则不显示
 		{
 			miclove.style.display="none";
 			miclovefull.style.display="block";
 		}
 	}
 }
+
+//love点击则变lovefull
 miclove.onclick=function(){
 	miclove.style.display="none";
 	miclovefull.style.display="block";
+	//如果lovelist里面有则不再添加
 	if(lovelist.indexOf(timerange.src)===-1)
 	{
 		lovelist.push(timerange.src);
@@ -126,6 +131,8 @@ miclove.onclick=function(){
 	
 	console.log(lovelist);
 }
+
+//lovefull点击，取消收藏
 miclovefull.onclick=function(){
 	miclovefull.style.display="none";
 	miclove.style.display="block";
@@ -133,11 +140,13 @@ miclovefull.onclick=function(){
 	{
 		if(timerange.src==lovelist[i])
 		{
-			lovelist.splice(lovelist.indexOf(timerange.src), 1);
+			lovelist.splice(lovelist.indexOf(timerange.src), 1);//删除数组里面的索引值
 		}
 	}
 	console.log(lovelist);
 }
+
+//删除播放列表中的歌曲
 deletemic.onclick=function(){
 	songsource.splice(songnum, 1);
 	arrsongsinger.splice(songnum, 1);
@@ -146,6 +155,7 @@ deletemic.onclick=function(){
 	nextsong();
 }
 
+//随机播放
 shunxu.onclick=function(){
 	flag=1;
 	timerange.removeAttribute('loop');
@@ -153,6 +163,8 @@ shunxu.onclick=function(){
 	suiji.style.display="block";
 	danqu.style.display="none";
 }
+
+//单曲播放
 suiji.onclick=function(){
 	flag=2;
 	timerange.setAttribute('loop',true);
@@ -160,6 +172,8 @@ suiji.onclick=function(){
 	suiji.style.display="none";
 	danqu.style.display="block";
 }
+
+//顺序播放
 danqu.onclick=function(){
 	flag=0;
 	timerange.removeAttribute('loop');
@@ -200,8 +214,4 @@ addfile1.onclick=function(){
 			songsource.push(addsongsource);
 		}
 	}
-	console.log(arrsongname);
-	console.log(arrsongsinger);
-	console.log(arrsongimg);
-	console.log(songsource);
 }
