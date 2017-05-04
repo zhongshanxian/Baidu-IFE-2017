@@ -8,9 +8,7 @@
 
 <body>
 
-<div class="container">
-
-	<audio src="song/hetuhuyan.mp3">您的浏览器不支持HTML 5的audio属性!</audio>
+<div class="container">	
 	<!--
 		<source src="song/hetuhuyan.mp3" type="audio/mpeg"> 
 		<source src="song/dongliqianniankongcheng.mp3" type="audio/mpeg"> 
@@ -22,11 +20,45 @@
 	<div class="con-left">
 		<h1 id="songname">狐言</h1>
 		<h3 id="songsinger">河图</h3>
-		<p><span id="timego">2:20</span>/<span id="timeall">3:31</span></p>
-		<input type="range" id="timerange">
+		<p><span id="timego">0:00</span>/<span id="timeall">3:31</span></p>
+		
+
+		<div id="rangebox">
+			<audio src="song/hetuhuyan.mp3" type="audio/mpeg" controls id="timerange">您的浏览器不支持HTML 5的audio属性!</audio>
+		</div>
+		<!--左下角图标-->
+			<div id="lovebox" class="btnbox">
+		  	<img src="style/img/pic.png" id="miclove">
+		  	<img src="style/img/pic.png" id="miclovefull">
+			</div>
+			<div id="deletebox" class="btnbox">
+				<img src="style/img/pic.png" id="deletemic">
+			</div>
+		<!--右下角图标-->
+			<div id="playbox" class="btnbox">
+		  	<img src="style/img/pic.png" id="micpause">
+		  	<img src="style/img/pic.png" id="micplay">
+			</div>
+			<div id="nextbox" class="btnbox">
+				<img src="style/img/pic.png" id="nextmic">
+			</div>
+			<!--四个小图标-->
+				<!--<div id="sound" class="smallbtnbox">
+					<img src="style/img/pic.png" id="sound1">
+					<img src="style/img/pic1.png" id="sound2">
+				</div>
+				<input type="range" id="soundrange" max="100" min="0">-->
+				<div id="download" class="smallbtnbox"><img src="style/img/pic.png" id="download1"></div>
+				<div id="addfile" class="smallbtnbox"><img src="style/img/pic.png" id="addfile1"></div>
+				<div id="playline" class="smallbtnbox">
+					<img src="style/img/pic.png" id="shunxu">
+					<img src="style/img/pic.png" id="suiji">
+					<img src="style/img/pic.png" id="danqu">
+				</div>
+		
 	</div>
 	<!--滚动图片栏-->
-	<div class="con-right"><img src="style/img/pic1.jpg" class="styleimg"></div>	
+	<img src="style/img/huyan.jpg" class="styleimg" id="songimg">
 
 </div>
 <script type="text/javascript" src="javascript/musicplayer.js"></script>

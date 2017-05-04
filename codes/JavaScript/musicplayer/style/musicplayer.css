@@ -2,17 +2,20 @@ body
 {
     background-color: #222;
 }
-div
+/*div
 {
     border:1px solid black;
-}
+}*/
 .container
 {
     position: relative;
-    width:800px;
-    height: 310px;
+    width:700px;
+    height: 260px;
     margin: 0 auto;
-    background: #f8f8f8;
+    background: url(img/flower.jpg) no-repeat;
+    background-size:100% 100%;
+    overflow: hidden;
+    border-radius: 15px;
     box-shadow: 0 0 15px black inset;
 }
 .styleimg
@@ -20,10 +23,10 @@ div
     position: absolute;
     right: 10px;
     top:5px;
-    width:300px;
-    height: 300px;
+    width:250px;
+    height: 250px;
     border-radius: 50%;
-    animation: rotateimg 4s linear infinite;
+    animation: rotateimg 5s linear infinite;
 }
 @keyframes rotateimg
 {
@@ -38,7 +41,7 @@ h1,h3,p
 }
 h3,p
 {
-    color: #666;
+    color: #222;
 }
 p
 {
@@ -48,20 +51,196 @@ p
 {
     width:430px;
     padding:15px 10px;
+    position: relative;
 }
-.con-right
+#rangebox
 {
-    width: 310px;
+    width:415px;
+    height: 30px;
+    position: relative;
+    overflow: hidden;
+    background:transparent;
 }
 #timerange
 {
-    width: 400px; 
+    width:520px;
+    position: absolute;
+    left:-100px;
+    background-color:transparent;
+    opacity: 0.8;
+}
+/*#btnright
+{
+    position: absolute;
+    right: 35px;
+    margin-top:10px;
+}*/
+.btnbox
+{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+}
+#playbox
+{
+    position: absolute;
+    right: 85px;
+    margin-top:10px;
+}
+#nextbox
+{
+    position: absolute;
+    right: 35px;
+    margin-top:10px;
+}
+#micpause
+{
+    position: absolute;
+    top:-103px;
+    left: 0;
+    width:80px;
+}
+#micplay
+{
+    position: absolute;
+    top:-66px;
+    left: -40px;
+    width:80px;
+    display: none;
+}
+#nextmic
+{
+    width:80px;
+    position: absolute;
+    top:-68px;
+}
+#deletebox
+{
+    position: absolute;
+    left: 65px;
+    margin-top:10px;
+}
+#lovebox
+{
+    position: absolute;
+    left: 15px;
+    margin-top:10px;
+}
+#miclove
+{
+    position: absolute;
+    top:5px;
+    left: -40px;
+    width:80px;
+}
+#miclovefull
+{
+    position: absolute;
+    top:5px;
+    left: 0px;
+    width:80px;
+    display: none;
+}
+#deletemic
+{
+    width:80px;
+    position: absolute;
+    top:-32px;
+}
+.smallbtnbox
+{
+    width:20px;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+}
+#download
+{
+    position: absolute;
+    top:113px;
+    right:96px;
+}
+#download1
+{
+    width:60px;
+    position: absolute;
+    left:-35px;
+    top:-83px;
+}
+#addfile
+{
+    position: absolute;
+    top:113px;
+    right:71px;
+}
+#addfile1
+{
+    width:60px;
+    position: absolute;
+    left:-5px;
+    top:-106px;
+}
+#playline
+{
+    position: absolute;
+    top:113px;
+    right:46px;
+}
+#shunxu
+{
+    width:60px;
+    position: absolute;
+    left:-34px;
+    top:-123px;
+    display: block;
+}
+#suiji
+{
+    width:60px;
+    position: absolute;
+    left:-34px;
+    top:-106px;
+    display: none;
+}
+#danqu
+{
+    width:60px;
+    position: absolute;
+    left:-35px;
+    top:-28px;
+    display: none;
+}
+#sound
+{
+    position: absolute;
+    top:113px;
+    left:78px;
+}
+#sound1
+{
+    width:60px;
+    position: absolute;
+    left:-5px;
+    top:-124px;
+}
+#sound2
+{
+    width:60px;
+    position: absolute;
+    left:-5px;
+    top:-124px;
+    display: none;
+}
+/*#soundrange
+{
+    width: 100px; 
     height: 1px; 
     border: 1px solid #888; 
     -webkit-border-radius: 5px; 
     -webkit-appearance: none !important; 
 }
-#timerange::-webkit-slider-thumb
+#soundrange::-webkit-slider-thumb
 {
     -webkit-appearance: none;
     position: relative;
@@ -72,8 +251,8 @@ p
     background-color: red;
     cursor: pointer;
 }
-#timerange::-webkit-slider-thumb::before 
+#soundrange::-webkit-slider-thumb::before 
 {
     left: -100px;
     background: #de1c16;
-}
+}*/
