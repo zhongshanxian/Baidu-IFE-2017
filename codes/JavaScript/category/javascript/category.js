@@ -1,0 +1,76 @@
+var flag=0;
+//广东
+firstone.onclick=function(){
+	if(flag==1&&second1.style.display=="block")
+	{
+		second1.style.display="none";//上级关闭，下级也关闭
+		third1.style.display="none";
+		fourth1.style.display="none";
+	}
+	else
+	{
+		second1.style.display="block";
+	}
+	flag=1;
+}
+second1one.onclick=function(){
+	if(flag==1&&third1.style.display=="block")
+	{
+		third1.style.display="none";
+		fourth1.style.display="none";
+		second1.style.display="block";
+	}
+	else
+	{
+		third1.style.display="block";
+	}
+	flag=2;//标志变化，防止影响上一级的显示
+}
+third1three.onclick=function(){
+	if(fourth1.style.display=="block")
+	{
+		fourth1.style.display="none";
+	}
+	else
+	{
+		fourth1.style.display="block";
+	}
+	flag=3;//标志变化，防止影响上一级的显示
+}
+
+//北京
+firstthree.onclick=function(){
+	if(flag==1&&second3.style.display=="block")
+	{
+		second3.style.display="none";
+		third3.style.display="none";
+	}
+	else
+	{
+		second3.style.display="block";
+	}
+	flag=1;
+}
+second3two.onclick=function(){
+	if(third3.style.display=="block")
+	{
+		third3.style.display="none";
+	}
+	else
+	{
+		third3.style.display="block";
+	}
+	flag=2;//标志变化，防止影响上一级的显示
+}
+var liall=document.getElementsByTagName("li");//找出所有li
+for(var i=0;i<liall.length;i++)
+{
+	if(liall[i].childNodes.length!==1)//有多个子节点的li，list-style为实心圆
+	{
+		liall[i].style.listStyle="disc";
+	}
+	else
+	{
+		liall[i].style.listStyle="circle";//一个子节点的为空心圆
+	}
+}
