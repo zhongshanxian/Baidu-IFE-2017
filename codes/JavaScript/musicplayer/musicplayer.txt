@@ -1,0 +1,21 @@
+
+
+
+
+
+
+
+
+
+知识：
+<audio src="song/hetuhuyan.mp3" type="audio/mpeg" controls id="timerange">您的浏览器不支持HTML 5的audio属性!</audio>
+
+小图标利用雪碧图
+
+/*动画：自定义动画，持续5秒，速度线性，无限*/
+    animation: rotateimg 5s linear infinite;
+@keyframes rotateimg
+{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}

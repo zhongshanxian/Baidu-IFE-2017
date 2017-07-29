@@ -3,6 +3,7 @@
 <head>
 	<title>musicplayer</title>
 	<meta charset="utf-8">
+	<meta name="author" content="xian">
 	<link rel="stylesheet" type="text/css" href="style/musicplayer.css">
 </head>
 
@@ -22,15 +23,16 @@
 		<h3 id="songsinger">河图</h3>
 		<p><span id="timego">0:00</span>/<span id="timeall">3:31</span></p>
 		
-
 		<div id="rangebox">
 			<audio src="song/hetuhuyan.mp3" type="audio/mpeg" controls id="timerange">您的浏览器不支持HTML 5的audio属性!</audio>
 		</div>
 		<!--左下角图标-->
+			<!--收藏歌曲-->
 			<div id="lovebox" class="btnbox">
 		  	<img src="style/img/pic.png" id="miclove">
 		  	<img src="style/img/pic.png" id="miclovefull">
 			</div>
+			<!--删除歌曲-->
 			<div id="deletebox" class="btnbox">
 				<img src="style/img/pic.png" id="deletemic">
 			</div>
@@ -42,14 +44,16 @@
 			<div id="nextbox" class="btnbox">
 				<img src="style/img/pic.png" id="nextmic">
 			</div>
-			<!--四个小图标-->
-				<!--<div id="sound" class="smallbtnbox">
-					<img src="style/img/pic.png" id="sound1">
-					<img src="style/img/pic1.png" id="sound2">
+			<!--三个小图标-->
+				<!--下载-->
+				<div id="download" class="smallbtnbox">
+					<img src="style/img/pic.png" id="download1">
 				</div>
-				<input type="range" id="soundrange" max="100" min="0">-->
-				<div id="download" class="smallbtnbox"><img src="style/img/pic.png" id="download1"></div>
-				<div id="addfile" class="smallbtnbox"><img src="style/img/pic.png" id="addfile1"></div>
+				<!--添加文件-->
+				<div id="addfile" class="smallbtnbox">
+					<img src="style/img/pic.png" id="addfile1">
+				</div>
+				<!--播放模式-->
 				<div id="playline" class="smallbtnbox">
 					<img src="style/img/pic.png" id="shunxu">
 					<img src="style/img/pic.png" id="suiji">
@@ -62,15 +66,15 @@
 <a download href=" " id="link1"></a>
 </div>
 <footer style="text-align:center;margin-top: 50PX;">
-	    <div>
-	        <p style="font-size:10px;color:white;">版权所有&copy;xian
-	        	<script type="text/javascript">
-	          		document.write(new Date().getFullYear());
-	  			</script>
-	        </p>
-	        <p style="font-size:10px;color:white;">粤ICP备<a href="http://www.miitbeian.gov.cn/" target="_blank" style="color:white;"> 17027867 </a>号</p>
-	    </div>
-	</footer>
+  <div>
+    <p style="font-size:10px;color:white;">版权所有&copy;xian
+    	<script type="text/javascript">
+      		document.write(new Date().getFullYear());
+			</script>
+    </p>
+    <p style="font-size:10px;color:white;">粤ICP备<a href="http://www.miitbeian.gov.cn/" target="_blank" style="color:white;"> 17027867 </a>号</p>
+  </div>
+</footer>
 <script type="text/javascript" src="javascript/musicplayer.js"></script>
 </body>
 </html>

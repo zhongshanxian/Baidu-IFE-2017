@@ -2,17 +2,15 @@ body
 {
     background-color: #222;
 }
-/*div
-{
-    border:1px solid black;
-}*/
 .container
 {
     position: relative;
     width:700px;
     height: 260px;
+    /*水平居中*/
     margin: 0 auto;
     background: url(img/flower.jpg) no-repeat;
+    /*使图片充满背景框*/
     background-size:100% 100%;
     overflow: hidden;
     border-radius: 15px;
@@ -32,8 +30,10 @@ body
     width:250px;
     height: 250px;
     border-radius: 50%;
+    /*动画：自定义动画，持续5秒，速度线性，无限*/
     animation: rotateimg 5s linear infinite;
 }
+/*自定义动画*/
 @keyframes rotateimg
 {
     from{transform: rotate(0deg);}
@@ -75,16 +75,11 @@ p
     background-color:transparent;
     opacity: 0.8;
 }
-/*#btnright
-{
-    position: absolute;
-    right: 35px;
-    margin-top:10px;
-}*/
 .btnbox
 {
     width: 40px;
     height: 40px;
+    /*隐藏图上其他小图标*/
     overflow: hidden;
     position: relative;
 }
@@ -193,6 +188,7 @@ p
     top:113px;
     right:46px;
 }
+/*三种播放模式，将其中一种设为display:block，其他为display:none*/
 #shunxu
 {
     width:60px;
@@ -217,48 +213,3 @@ p
     top:-28px;
     display: none;
 }
-#sound
-{
-    position: absolute;
-    top:113px;
-    left:78px;
-}
-#sound1
-{
-    width:60px;
-    position: absolute;
-    left:-5px;
-    top:-124px;
-}
-#sound2
-{
-    width:60px;
-    position: absolute;
-    left:-5px;
-    top:-124px;
-    display: none;
-}
-/*#soundrange
-{
-    width: 100px; 
-    height: 1px; 
-    border: 1px solid #888; 
-    -webkit-border-radius: 5px; 
-    -webkit-appearance: none !important; 
-}
-#soundrange::-webkit-slider-thumb
-{
-    -webkit-appearance: none;
-    position: relative;
-    height: 8px;
-    width: 8px;
-    border-radius: 50%;
-    border: 1px solid #888;
-    background-color: red;
-    cursor: pointer;
-}
-#soundrange::-webkit-slider-thumb::before 
-{
-    left: -100px;
-    background: #de1c16;
-}*/
