@@ -20,7 +20,7 @@ micplay.onclick=function(){
 	micpause.style.display="block";
 }
 
-//每隔一秒检查是否结束
+//每隔一秒检查是否结束，这是检测时间显示
 var end=setInterval(function(){
 	if((timerange.ended&&flag==0))//结束后且为顺序模式，则按顺序继续下一首
 	{
@@ -31,18 +31,21 @@ var end=setInterval(function(){
 	else if((timerange.ended&&flag==1))//结束后且为随机模式，则按随机继续下一首
 	{
 	  link1.innerHTML=" ";//删除下载链接
-	  var endsuiji=setInterval(function(){//每个一秒获取随机数
-	  	if(timerange.ended)
-	  	{
-	  		songnum=Math.floor(Math.random()*arrsongsinger.length);//获取0-有多少首歌的随机数
-	  		nextsong();//调用下一首歌函数
-	  	}
-	  },1000);
+	  //若随机获取到的songnum与原来的相同，则播放下一首
+	  if(Math.floor(Math.random()*arrsongsinger.length)!==songnum)
+	  {
+	  	songnum=Math.floor(Math.random()*arrsongsinger.length);//获取0-有多少首歌的随机数
+	  }
+	  else
+	  {
+	  	songnum+=1
+	  }
+	  nextsong();//调用下一首歌函数
 	}
 	else if((timerange.ended&&flag==2))//结束后且为单曲模式，则不断循环
 	{
 		link1.innerHTML=" ";
-		timerange.setAttribute('loop',true);//给audio设置loop循环属性
+		//自动单曲循环
 	}
 	//获取当前时间
 	var minute1=parseInt(Math.round(timerange.currentTime)/60);//获取分钟
@@ -79,7 +82,15 @@ nextmic.onclick=function(){
 	}
 	else if(flag==1)
 	{
-		songnum=Math.floor(Math.random()*arrsongsinger.length);//随机模式，点击下一首则随机获取下一首
+		//若随机获取到的songnum与原来的相同，则播放下一首
+	  if(Math.floor(Math.random()*arrsongsinger.length)!=songnum)
+	  {
+	  	songnum=Math.floor(Math.random()*arrsongsinger.length);//获取0-有多少首歌的随机数
+	  }
+	  else
+	  {
+	  	songnum=songnum+1;
+	  }
 	}
 	else if(flag==2)
 	{
@@ -88,27 +99,29 @@ nextmic.onclick=function(){
 	nextsong();//调用下一首函数
 }
 
+//匹配信息函数
+function matchmessage(num){
+	songname.innerHTML=arrsongname[num];//显示对应信息
+	songsinger.innerHTML=arrsongsinger[num];
+	songimg.src=arrsongimg[num];
+	timerange.src=songsource[num];
+}
 //下一首函数
 function nextsong(){
 	if(songnum<arrsongsinger.length)//当songnum<总歌数
 	{
-		songname.innerHTML=arrsongname[songnum];//显示对应信息
-		songsinger.innerHTML=arrsongsinger[songnum];
-		songimg.src=arrsongimg[songnum];
-		timerange.src=songsource[songnum];
+		matchmessage(songnum);
 	}
 	if(songnum>=arrsongsinger.length)//大于则回归0
 	{
 		songnum=0;
-		songname.innerHTML=arrsongname[songnum];
-		songsinger.innerHTML=arrsongsinger[songnum];
-		songimg.src=arrsongimg[songnum];
-		timerange.src=songsource[songnum];
+		matchmessage(songnum);
 	}
+	//切换玩立即播放 
 	micplay.style.display="block";
 	micpause.style.display="none";
 	timerange.play();
-	//显示对应的lovebtn
+	//前面清除完上一首歌的lovehtn，现在显示正在播放歌曲的lovebtn
 	for(var i=0;i<lovelist.length;i++)
 	{
 		if(lovelist[i]==timerange.src)//有则显示，无则不显示
@@ -128,8 +141,12 @@ miclove.onclick=function(){
 	{
 		lovelist.push(timerange.src);
 	}
-	
 	console.log(lovelist);
+	document.getElementById("lovelist").innerHTML="";
+	for(var i=0;i<lovelist.length;i++)
+	{
+		document.getElementById("lovelist").innerHTML+=lovelist[i]+"<br>";
+	}
 }
 
 //lovefull点击，取消收藏
@@ -144,15 +161,35 @@ miclovefull.onclick=function(){
 		}
 	}
 	console.log(lovelist);
+	document.getElementById("lovelist").innerHTML="";
+	for(var i=0;i<lovelist.length;i++)
+	{
+		document.getElementById("lovelist").innerHTML+=lovelist[i]+"<br>";
+	}
 }
 
 //删除播放列表中的歌曲
 deletemic.onclick=function(){
+	//同步删除收藏列表
+	for(var i=0;i<lovelist.length;i++)
+	{
+		if(timerange.src==lovelist[i])
+		{
+			lovelist.splice(lovelist.indexOf(timerange.src), 1);//删除数组里面的索引值
+		}
+	}
+	document.getElementById("lovelist").innerHTML="";
+	for(var i=0;i<lovelist.length;i++)
+	{
+		document.getElementById("lovelist").innerHTML+=lovelist[i]+"<br>";
+	}
+
 	songsource.splice(songnum, 1);
 	arrsongsinger.splice(songnum, 1);
 	arrsongname.splice(songnum, 1);
 	arrsongimg.splice(songnum, 1);
 	nextsong();
+	document.getElementById("songnamelist").innerHTML=arrsongname;
 }
 
 //随机播放
@@ -181,11 +218,12 @@ danqu.onclick=function(){
 	suiji.style.display="none";
 	danqu.style.display="none";
 }
+
 download1.onclick=function(){
 	link1.href=timerange.src;
 	link1.innerHTML="点击链接即可下载："+timerange.src;
-	console.log("download");
 }
+
 addfile1.onclick=function(){
 	var addsongname=prompt("添加的歌名（不能为空）：","");
 	var addsongsinger=prompt("添加的歌曲的歌手（不能为空）：","");

@@ -1,21 +1,51 @@
-
-
-
-
-
-
-
-
+音乐播放器功能：
+1.添加，删除歌曲
+2.收藏，下载歌曲
+3.歌曲播放，暂停
 
 知识：
+1.利用<audio>标签显示播放条
+controls：显示控制条（音量，下载等）
 <audio src="song/hetuhuyan.mp3" type="audio/mpeg" controls id="timerange">您的浏览器不支持HTML 5的audio属性!</audio>
 
-小图标利用雪碧图
+2.小图标尽量利用雪碧图
 
-/*动画：自定义动画，持续5秒，速度线性，无限*/
-    animation: rotateimg 5s linear infinite;
+3.动画：自定义动画，持续5秒，速度线性，无限
+animation: rotateimg 5s linear infinite;
+/*360旋转*/
 @keyframes rotateimg
 {
     from{transform: rotate(0deg);}
     to{transform: rotate(360deg);}
 }
+
+4.onclick事件
+micpause.onclick=function(){
+	```
+}
+
+5.audio的js控制方法
+timerange.play();//控制音频播放
+timerange.pause();//控制音频暂停
+timerange.ended//判断是否播放结束，是则true
+timerange.currentTime//获取进度条的当前时间
+timerange.duration//获取进度条的总时间
+timerange.removeAttribute('loop');//移除audio的循环属性
+
+Notes:
+1.setInterval(function(){},1000);//每隔1秒执行函数
+setTimeout(function(){},1000);//一秒后执行函数
+
+2.如果lovelist里面有，则不再添加
+	if(lovelist.indexOf(timerange.src)==-1)
+	{
+		lovelist.push(timerange.src);
+	}
+
+3.删除位于 index 的元素
+先找出timerange.src在lovelist中的index
+再利用splice(index,1)删除
+lovelist.splice(lovelist.indexOf(timerange.src), 1);//删除数组里面的索引值
+
+4.prompt弹出确认框
+var addsongname=prompt("添加的歌名（不能为空）：","");
