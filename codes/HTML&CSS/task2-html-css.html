@@ -4,9 +4,11 @@
 
 <head>
     <title>task2-html-css</title>
-    <link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css"> 
     <meta charset="utf-8">
     <meta name="author" content="xian">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style type="text/css">
     body
     {
@@ -199,21 +201,21 @@
 
 <body>
   <header>
-  <h1>古风</h1>
-  <!--导航链接-->
-  <nav>
-    <ul>
-      <li><a href="#part1">古风兴起</a></li>
-      <li><a href="#part2">古风图片</a></li>
-      <li><a href="#part3">表格</a></li>
-      <li><a href="#part4">注册</a></li>
-    </ul>
-  </nav>
+    <h1>古风</h1>
+    <!--导航链接-->
+    <nav>
+      <ul>
+        <li><a href="#part1">古风兴起</a></li>
+        <li><a href="#part2">古风图片</a></li>
+        <li><a href="#part3">表格</a></li>
+        <li><a href="#part4">注册</a></li>
+      </ul>
+    </nav>
   </header>
  
   <div id="main"><!--两栏div-->
     <div id="left"> <!--左栏div-->  
-<!--文章-->
+      <!--文章-->
       <article id="part1">
         <h3>古风兴起</h3>
         <h4>古风入门</h4>
@@ -229,29 +231,31 @@
         <p>作者：xian 2017-02-26</p>
         <p class="text-indent">古代服饰史研究者高春明于1996年出版的<em> 《中国衣冠服饰大辞典》 </em>将<a href="https://zh.wikipedia.org/wiki/%E6%B1%89%E6%9C%8D" target="_blank">汉服</a>定义为：<strong>①辽代服制中的汉族服饰；②汉代服饰；③泛指一般的汉族服装</strong>。<br>
           近年来有“汉服运动”支持者的观点认为，“汉服”是“以华夏汉族的礼仪文化为基础，通过历代汉人王朝推崇周礼、象天法地而形成的具有独特华夏民族文化风貌性格、明显区别于其它民族传统服装的服装体系。”</p>
-        <div align="center" class="row">
-          <div class="col-xs-5"><img src="http://ww4.sinaimg.cn/bmiddle/a163c684jw1e6b46lo3kwj20m8123gpc.jpg">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-5"><img src="http://ww4.sinaimg.cn/bmiddle/a163c684jw1e6b46lo3kwj20m8123gpc.jpg">
+            </div>
+            <div class="col-xs-7" id="word" align="center"><ul>
+              <li>袄裙</li>
+              <li>褙子</li>
+              <li>道袍</li>
+              <li>对襟半臂襦裙</li>
+              <li>交领襦裙</li>
+              <li>齐胸襦裙</li>
+              <li>曲裾</li>
+              <li>裋褐</li>
+              <li>圆领袍</li>
+              <li>坦领半臂襦裙</li>
+              <li>直裾</li>
+              <li>朱子深衣</li>
+              </ul>
+            </div>
           </div>
-        <div class="col-xs-7" id="word"><ul>
-          <li>袄裙</li>
-          <li>褙子</li>
-          <li>道袍</li>
-          <li>对襟半臂襦裙</li>
-          <li>交领襦裙</li>
-          <li>齐胸襦裙</li>
-          <li>曲裾</li>
-          <li>裋褐</li>
-          <li>圆领袍</li>
-          <li>坦领半臂襦裙</li>
-          <li>直裾</li>
-          <li>朱子深衣</li>
-          </ul>
-        </div>
         </div>
       </article>
+
       <section id="part2" class="container">
         <h3>古风图片</h3>
-        
         <figure style="box-shadow:0px 0px 10px #00aa77;">
           <figcaption>最适合做手机壁纸的图片</figcaption>
           <img src="http://wx4.sinaimg.cn/mw1024/6aa3df83gy1fcgpc1mws2j20gj0rktee.jpg">
@@ -329,7 +333,7 @@
           </tr>   
           <tr style="background:#cccccc;">
             <td>合计</td>
-            <td colspan="3">￥51</tr>
+            <td colspan="3">￥51</td>
           </tr>
         </table>
       </section>
