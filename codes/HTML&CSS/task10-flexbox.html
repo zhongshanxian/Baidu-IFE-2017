@@ -4,13 +4,12 @@
 	<title>task10-flexbox</title>
 	<meta charset="utf-8">
   <meta name="author" content="xian">
-	<link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
 	<style type="text/css">
 		.item
 		{
 		  display:flex;
-		  justify-content:space-between;
-		  align-items:center;
+		  justify-content:space-between;/*item之间等距，两边距离为0*/
+		  align-items:center;/*交叉轴的中点对齐*/
 		}
 		.item div
 		{
@@ -40,10 +39,11 @@
 		{
 		  .item
 		  {
-		   flex-wrap:wrap;
-		   align-items: flex-start;
+		   flex-wrap:wrap;/*换行*/
+		   align-items: flex-start;/*顶部对齐*/
 		   margin:0 38px;
 		  }
+		  /*改变顺序*/
 		  .item1
 		  {
 		    order:2;
